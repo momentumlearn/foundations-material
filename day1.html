@@ -47,11 +47,11 @@
 				</section>
 				<section data-background-image="images/fe-components.jpg">
 				</section>
+<!--  OVERVIEW OF TODAY'S TOPICS  -->
 				<section>
-					<h3>HTML looks like this<h3>
+					<h3>Overview: What is HTML?<h3>
 						<img src="images/html-example.png">
 						<aside class="notes">
-							<h5>What does HTML do?</h5>
 							<p>HTML acts as the skeleton of a web page, providing its underlying structure. You can use HTML to specify parts of your page like:</p>
 								<ul>
 									<li>header and footer</li>
@@ -67,15 +67,112 @@
 							<p>Look at <a href="https://www.durhamtech.edu/">Durham Tech's website</a> to show source</p>
 						</aside>
 				</section>
+				<section>
+					<h3>Overview: What is CSS?</h3>
+						<pre><code data-trim>
+body {
+  background: #515184;
+  color: #cdecf9;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.hero-image {
+  border: 1px solid #000000;
+  height: 100px;
+  width: 100%;
+}
+						</code></pre>
+					<aside class="notes">
+						<p>HTML by itself has very little styling (has some -- give examples). CSS gives us a language to express and describe the visual presentation of our content in a way the browser can interpret and display.<p>
+					</aside>
+				</section>
+				<section data-background-image="images/css-diagram.jpg">
+					<aside class="notes">						
+						<p>Cascading Style Sheets. The pattern lets us describe styles for general elements that apply to all its subsets (or children elements). We can have one stylesheet and apply it to many different pages -- or, alternately, have certain styles that only apply to certain pages.</p></aside>
+				</section>
+
+<!-- INTRO TO HTML -->
+				<section>
+					<h2>HTML</h2>
+				</section>
 				<section data-background-image="images/html-doctype.jpg">
+					<aside class="notes">
+						<p>An HTML document needs a few basic things to work:</p>
+						<li> a self-closing DOCTYPE tag</li>
+						<li> html tags</li>
+						<li> head tags</li>
+						<li> body tags</li>			
+					</ul>
+					<p>We will include almost all of the content of our website inside the body tags</p>
+					<p>A word about indentation and nesting -- explain the things they need to know. Elements that open first close last. </p>
+					</aside>
+				</section>
+				<section data-background-image="images/html-elements.jpg">
+					<aside class="notes">
+						<p>HTML elements are the building blocks of a website's structure.</p>
+						<p>[Show Durham Tech website and point out elements visually. What kind of things do you see here? Break it down into small parts.] Look at a website: we need some way to tell the browser, in code, to make these things appear on the page. HTML is the language we use to tell the browser to do that.</p>
+						<p>HTML content is written using "tags".</p>
+						<p>Tags show the beginning and ending of an HTML element. [Use slide illustration to break down the structure of an element: tag opening/closing; attribute/value; content.]</p>
+						<p>[Write some examples on whiteboard, showing the structure/syntax of a tag]</p>
+					</aside>
 				</section>
 				<section>
-
-					
+					<h3>Let's build a page!</h3>
+					<iframe src="https://giphy.com/embed/ChpOyeacGmpQk" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dog-computer-ChpOyeacGmpQk">via GIPHY</a></p>
+					<aside class="notes">
+						<p>Demo putting together a very simple page in the text editor and loading it in the browser. Ask for help from the audience for the markup. What do we need to include?</p>
+					</aside>
 				</section>
+				<section>
+					<h2>CODE BREAK!</h2>
+					<p>Put together your own page! Create a project folder, then create an html file called "index.html". Create a page that can be rendered in the browser using DOCTYPE, head, and body elements. Create at least one element to display text content on the page.</p>
+					<aside class="notes">This should take about 10 minutes</aside>
+				</section>
+				<section>
+					<h2>Let's look at some examples of elements<h3>
+				</section>
+				<section>
+					<h3>Element: Heading</h3>
+					<p>Heading elements are for texts that mark titles of sections on your page. The numbers indicate hierarchy of content, not size.</p>
+					<pre><code class="html" data-trim>
+							<h1>Heading 1</h1>
+							<h2>Heading 2</h2>
+							<h3>Heading 3</h3>
+							<h4>Heading 4</h4>
+							<h5>Heading 5</h5>
+							<h6>Heading 6</h6>
+					</code></pre>
+					<aside class="notes">Demonstrate this in the page we wrote and have loaded in the browser.</aside>
+				</section>
+				<section>
+					<h3>Element: Paragraph</h3>
+							<pre><code data-trim>
+								<p>Merge records dur'm startup stampede medicine the connecter durham rescue mission, french press house-made parrish street duke chapel 147, rolling hills mount moriah watts-hillandale north durham.</p> 
+								<p>Startup stampede blue devils blues festival main street arm wrestling scooter nanobrew local, artisan baked goods durham mag pizza the park start-up nccu, watts coffee the loop third fridays maker diy.</p>
+						</code></pre>
+						<aside class="notes">
+							<p>Demo in editor and browser. You can also mention placeholder text here (this is <a href="http://durhamipsum.com/")></a></p>
+						</aside>
+				</section>
+				<section>
+					<h3>Element: Link</h3>
+				</section>
+				<section>
+					<h3>Element: Image</h3>
+				</section>
+				<section>
+					<h3>Element: List</h3>
+				</section>
+				<section>
+					<h3>CODE BREAK</h3>
+					<p>Add a link, an image, and a list to your page</p>
+				</section>
+
+
+<!-- INTRO TO CSS -->
 			</div>
 		</div>
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
