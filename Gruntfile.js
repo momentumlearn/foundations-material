@@ -106,6 +106,7 @@ module.exports = function(grunt) {
 			bundle: {
 				src: [
 					'index.html',
+					"day1.html",
 					'css/**',
 					'js/**',
 					'lib/**',

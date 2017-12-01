@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/momentum.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Welcome to Web Foundations!</h1>
+				</section>
+				<section>
+					<h2>Course Objectives</h2>
+					<p>Create, style, and deploy a basic website using HTML, CSS, and JS!</p>
+				</section>
+				<section>
+					<h2>Today's Objectives</h2>
+						<ul>
+							<li>Use the Chrome browser and Atom text editor for development</li>
+							<li>Create a webpage!</li>
+							<li>Create content with HTML</li>
+							<li>Write CSS to style your content using fonts, colors, decorations, and alignment</li>
+						</ul>
+				</section>
+				<section>
+					<h3>Tools for the Job</h3>
+						<a href="https://www.google.com/chrome/browser/desktop/index.html"><img src="images/chrome.png"></a>
+						<a href="https://atom.io/"><img src="images/atom.png"></a>
+				</section>
+				<section data-background-image="images/fe-components.jpg">
+				</section>
+				<section>
+					<h3>HTML looks like this<h3>
+						<img src="images/html-example.png">
+						<aside class="notes">
+							<h5>What does HTML do?</h5>
+							<p>HTML acts as the skeleton of a web page, providing its underlying structure. You can use HTML to specify parts of your page like:</p>
+								<ul>
+									<li>header and footer</li>
+									<li>sections</li>
+									<li>text headings</li>
+									<li>body text</li>
+									<li>images</li>
+									<li>links</li>
+									<li>form inputs and buttons	</li>
+									<li>items in a list</li>
+								</ul>
+							<p>and more. HTML is also used to indicate what elements of a web page are logically enclosed in other elements. For example, a button that says "Submit Feedback" might belong inside a form, which is inside the same section as the heading, "Website Feedback".</p>
+							<p>Look at <a href="https://www.durhamtech.edu/">Durham Tech's website</a> to show source</p>
+						</aside>
+				</section>
+				<section data-background-image="images/html-doctype.jpg">
+				</section>
+				<section>
+
+					
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
