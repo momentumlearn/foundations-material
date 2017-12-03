@@ -171,6 +171,61 @@ body {
 
 
 <!-- INTRO TO CSS -->
+			<section>
+				<h2>CSS</h2>
+			</section>
+			<section data-background-image="images/css-diagram.jpg">
+				<aside class="notes">						
+					<p>Reminder: we saw this slide earlier in the overview. CSS provides style for the content we've built with HTML</p>
+					<p>Demo this in the browser by writing some styles for the HTML page we're working on in the Chrome Inspector.</p>
+					<p>Optional: show <a href="http://www.csszengarden.com/"></a> to make the point that the styles change but the content doesn't have to.</p>
+				</aside>
+			</section>
+			<section>
+				<h3>Connecting CSS to HTML</h3>
+				<pre><code data-trim>
+					<link rel="stylesheet" type="text/css" href="main.css">
+				</code></pre>
+				<aside class="notes">
+					<p>Explain options to include it inline, embedded, or in an external sheet. To link a stylesheet, include this line of code nested inside the `head` element of your HTML document.</p>
+				</aside>
+			</section>
+			<section data-background-image="images/css-rules.jpg">
+				<aside class="notes">
+					<p>css is written in a stylesheet as a series of rules. Rules are selectors plus properties.
+					<p>Let's look at the syntax of a css rule.</p>
+				</aside>
+			</section>
+			<section>
+				<h3>Selectors and properties</h3>
+				<pre><code>
+p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.callout {
+  background-color: #E4E4E4;
+  border: 2px solid #000000;
+}
+
+.text-large {
+  font-size: 48px;
+}
+				</code></pre>
+				<aside class="notes">
+					<h6>Spend a fair amount of time on this slide</h6>
+					<p>Call attention to selectors using tags vs classes.</p>
+					<p>Demo how to do this in the text editor and browser.</p>
+					<p>Write/change some styles and reload the page to demonstrate how this works.</p>
+						<p>Go through it slowly and repeat several times.</p>
+					<p>Demo several different properties applied to different elements: background-color, font-size, color, text-decoration, height, width</p>
+				</aside>
+			</section>
+			<section>
+				<h3>CODE BREAK</h3>
+				<p>Create an external stylesheet called "main.css" and link it to your html page. Write some styles for your page's content, giving some thought to the type of selectors you want to use. Reload the page to make sure your styles are applied.</p>
+			</section>
 			</div>
 		</div>
 		<script src="lib/js/head.min.js"></script>
