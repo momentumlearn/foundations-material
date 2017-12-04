@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/momentum.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Welcome to Day Two</h1>
+        </section>
+        <section>
+          <h2>Today's Objectives</h2>
+            <ul>
+              <li>Learn about the box model in CSS</li>
+              <li>Apply borders and margins to HTML elements</li>
+              <li>Use CSS to position elements on your page</li>
+              <li>Understand the normal flow of HTML block and inline elements</li>
+            </ul>
+        </section>
+        <section>
+          <h3>What is page layout?</h3>
+          <img src="images/wikipedia-wireframe.png" id="wireframe">
+          <label for="wireframe" style="font-size: small; float: right">source: <a rel="nofollow" href="http://www.flickr.com/people/doos/">http://www.flickr.com/people/doos/</a> - <a rel="nofollow" href="http://www.flickr.com/photos/doos/3931846833/">http://www.flickr.com/photos/doos/3931846833/</a>, <a href="http://creativecommons.org/licenses/by/2.0" title="Creative Commons Attribution 2.0">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=12888965">Link</a></label>
+          <aside class="notes">
+            <p>Layout is the arrangement of HTML elements on the page, in relation to each other and to the dimensions of the browser window. Discuss the wireframe image by asking students to figure out what elements go into creating a layout like this.</p>
+            <p>Talk about UI/UX as a field: the consideration of how people will use and perceive our content/ </p>
+            <p>HTML content has meaning and structure, but lacks presentation. Analogy to writing an essay: introduction/thesis statement, section headers, paragraphs, conclusion — and writing style is about how we present the content to the user (analogy to tone, word choice, how formal or informal your language is in an essay).</p>
+            <p>Awareness of audience is how you make&nbsp;these decisions&nbsp;— this is the core of UX.</p>
+            <p>As a web designer or developer, you need to put together your structure and content with consideration for what your audience needs and expects in order to get your point across most effectively.</p>
+          </aside>
+        </section>
+        <section>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
