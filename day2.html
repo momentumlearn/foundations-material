@@ -39,13 +39,32 @@
         <section>
           <h3>What is page layout?</h3>
           <img src="images/wikipedia-wireframe.png" id="wireframe">
-          <label for="wireframe" style="font-size: small; float: right">source: <a rel="nofollow" href="http://www.flickr.com/people/doos/">http://www.flickr.com/people/doos/</a> - <a rel="nofollow" href="http://www.flickr.com/photos/doos/3931846833/">http://www.flickr.com/photos/doos/3931846833/</a>, <a href="http://creativecommons.org/licenses/by/2.0" title="Creative Commons Attribution 2.0">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=12888965">Link</a></label>
+          <label for="wireframe" class="image-attribution">source: <a rel="nofollow" href="http://www.flickr.com/people/doos/">http://www.flickr.com/people/doos/</a> - <a rel="nofollow" href="http://www.flickr.com/photos/doos/3931846833/">http://www.flickr.com/photos/doos/3931846833/</a>, <a href="http://creativecommons.org/licenses/by/2.0" title="Creative Commons Attribution 2.0">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=12888965">Link</a></label>
           <aside class="notes">
             <p>Layout is the arrangement of HTML elements on the page, in relation to each other and to the dimensions of the browser window. Discuss the wireframe image by asking students to figure out what elements go into creating a layout like this.</p>
           </aside>
         </section>
         <section>
-
+          <h3>BOXES!</h3>
+          <iframe src="https://giphy.com/embed/WfszxUKboL1Ze" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/WfszxUKboL1Ze">via GIPHY</a></p>
+          <aside class="notes">Positioning things in CSS means learning to think about your content in boxes.</aside>
+        </section>
+        <section>
+          <h3>The Box Model</h3>
+          <img src="images/box-model-mdn.png" id="box-model-mdn" style="height: 500px">
+          <label for="box-model-mdn" class="image-attribution"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">&quot;The Box Model&quot;</a> by <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC-BY-SA 2.5</a></label>
+          <aside class="notes">
+            <p>Every HTML element is rendered in the browser as a box with a certain width and height. Each element's box is made up of a series of smaller nested boxes.</p>
+            <p>The **content box** is where text, images, and other elements will appear. This is the innermost box and can be sized using the `width` and `height` properties.</p>
+            <p>The **padding box** is the blank space between the content box and the border box, and can give individual elements breathing room next to the rest of the content on the page. Padding can be adjusted using the `padding` properties.</p>
+            <p>The **border box** is the region that marks the visual edge of the content box. The `background-color` property of the content box, for example, will not extend beyond the border. The border's width, color, and style can be adjusted all at once using the single `border` shorthand property, or individually using `border-width`, `border-style`, and `border-color`.</p>
+            <p>The **margin box** is the blank space between the border box of the element and the next HTML element. Margins are similar to padding but are positioned outside of the visual area of the element. Margins can be styled using the `margin` properties.</p>
+          </aside>
+        </section>
+        <section data-background-image="images/css-block-vs-inline.png">
+          <aside class="notes">
+            <p>Block vs. inline content.</p>
+          </aside>
         </section>
       </div>
     </div>
