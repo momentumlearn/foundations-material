@@ -26,6 +26,9 @@
       <div class="slides">
         <section>
           <h1>Welcome to Day Two</h1>
+          <aside class="notes">
+            <p>Review the homework from last night!</p>
+          </aside>
         </section>
         <section>
           <h2>Today's Objectives</h2>
@@ -55,6 +58,7 @@
           <label for="box-model-mdn" class="image-attribution"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">&quot;The Box Model&quot;</a> by <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC-BY-SA 2.5</a></label>
           <aside class="notes">
             <p>Every HTML element is rendered in the browser as a box with a certain width and height. Each element's box is made up of a series of smaller nested boxes.</p>
+            <p>You can show the box model in the Chrome Inspector.</p>
             <p>The **content box** is where text, images, and other elements will appear. This is the innermost box and can be sized using the `width` and `height` properties.</p>
             <p>The **padding box** is the blank space between the content box and the border box, and can give individual elements breathing room next to the rest of the content on the page. Padding can be adjusted using the `padding` properties.</p>
             <p>The **border box** is the region that marks the visual edge of the content box. The `background-color` property of the content box, for example, will not extend beyond the border. The border's width, color, and style can be adjusted all at once using the single `border` shorthand property, or individually using `border-width`, `border-style`, and `border-color`.</p>
@@ -63,7 +67,11 @@
         </section>
         <section data-background-image="images/css-block-vs-inline.png">
           <aside class="notes">
-            <p>Block vs. inline content.</p>
+            <h6>Block vs. Inline content.</h6>
+            <p>HTML elements have natural behavior in the page ("normal flow.")</p>
+            <p>Block elements occupy the entire horizontal space, such as a section of a page or container.</p>
+            <p>Inline elements occupy a part of the horizontal space equal to the width needed to fit the inner content, such as a string of text, a link, or an image</p>
+            <p>You can change the natural behavior of an element by setting the display property.</p>
           </aside>
         </section>
       </div>
