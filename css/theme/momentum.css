@@ -16,6 +16,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   float: right;
 }
 
+.reveal .monospace {
+  font-family: Courier, Monaco, monospace;
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
