@@ -42,6 +42,74 @@
             </ul>
         </section>
         <section data-background-image="images/fe-components.jpg">
+          <aside class="notes">
+          <p>Talk about JS's role in the front end, alongside HTML and CSS.</p>
+          <p>JS lets you make web pages interactive and dynamic.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>What can you do with JS?</h2>
+          <ul>
+            <li>Access and modify content on the web page</li>
+              <ul>
+                <li>Select all the elements with a certain class</li>
+                <li>Check a value that was entered into a form input</li>
+                <li>Change the size of an image</li>
+                <li>Add new content to the page without reloading the page</li>
+              </ul>
+            <li>Tell the browser to do something, and when to do it</li>
+              <ul>
+                <li>React to user input, like a mouse click or a tap on an element</li>
+                <li>Show a slideshow</li>
+                <li>Track how much time has passed while a user is on a page</li>
+                <li>Wait until something happens before content is shown on the page</li>
+                <li>Show or hide content on a page if a certain condition is met</li>
+              </ul>
+          </ul>
+          <aside class="notes">
+            <h6>How does JS run in the browser?</h6>
+            <ul>
+              <li>You visit a website with JavaScript code on it.</li>
+              <li>Your browser (e.g., Chrome) reads the code line-by-line.</li>
+              <li>The browser runs each line of code as it reads it.</li>
+              <li>Based on these instructions, the browser may perform calculations or searches and does something on the page.</li>
+              <li>If the browser finds code it doesn't understand, it stops running and throws an error.</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+            <h2>JavaScript in the Wild</h2>
+            <ul>
+              <li><a href="https://www.npr.org/music">NPR Music</a></li>
+              <li><a href="http://www.histography.io/">histography.io</a></li>
+              <li><a href="http://leimi.github.io/drawingboard.js/">drawingboard.js</a></li>
+              <li><a href="https://codepen.io/sureshrkm/pen/ZbzBpr">Accordion menu</a></li>
+            </ul>
+            <aside class="notes">
+              <p>Show the JavaScript console in Chrome and that you can write/run JS there. Make sure students can open and find the console. You can show sources with some of the JS on the sites listed on the slide, but that might be overwhelming.</p>
+            </aside>
+        </section>
+        <section>
+          <h2>JavaScript is loaded with the page</h2>
+          <pre><code data-trim>
+            <script>
+                // SOME JavaScript code can go in here!
+            </script>
+          </code></pre>
+          <aside class="notes">As with css, there are several ways to include JS with your HTML: inline, directly inside script tags, or linked to an external file with the script tag's <span class="monospace">src</span> attribute. Make sure to place it near the bottom of the content inside the body element.</aside>
+        </section>
+        <section>
+          <h3>Including JavaScript in your page</h3>
+          <pre><code>
+            <script src="main.js"></script>
+          </code></pre>
+          <aside class="notes">
+            <p>Demo creating, linking, and loading a JS file to the HTML page from previous classes, and in here introduce <span class="monospace">console.log</span>, <span class="monospace">window.alert</span>, and/or <span class="monospace">document.write</span>. Show page source before and after JS script is loaded.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>CODE BREAK</h2>
+          <p>Inside the same project folder with your HTML and CSS files, create a JavaScript file and link it to your HTML page. In the js file, write code to output ‘Hello World!”. Try typing in the console and playing with what you can do there. Try some basic math operations!</p>
         </section>
       </div>
       <footer class="footer">
