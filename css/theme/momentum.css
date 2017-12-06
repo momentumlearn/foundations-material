@@ -11,7 +11,7 @@
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
-/*CUSTOM STYLES*/
+/* CUSTOM STYLES */
 .reveal .image-attribution {
   font-size: .5em;
   float: right;
@@ -27,16 +27,50 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   bottom: 10px;
 }
 
+
+/* BRAND COLORS FOR TEXT */
+.reveal .brand-blue {
+  color: #1E0A6E;
+}
+
+.reveal .brand-cream {
+  color: #F3FFF2;
+}
+
+.reveal .brand-dark-blue {
+  color: #0E013E;
+}
+
+.reveal .brand-green {
+  color: #006E40;
+}
+
+.reveal .brand-light-blue {
+  color: #E1F5F0;
+}
+
+.reveal .brand-salmon {
+  color: #F15F63;
+}
+
+.reveal .brand-teal {
+  color: #5FD2B1;
+}
+
+.reveal .brand-yellow {
+  color: #E5D23D;
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #F3FFF2;
-  background-color: #F3FFF2; }
+  background: #E1F5F0;
+  background-color: #E1F5F0; }
 
 .reveal {
   font-family: "Kessel", "Poppins", sans-serif;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: normal;
   color: #0E013E; }
 
@@ -65,9 +99,9 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #0E013E;
+  color: #1E0A6E;
   font-family: "Kessel", "Poppins", sans-serif;
-  font-weight: normal;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;
@@ -75,7 +109,7 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.5em; }
+  font-size: 3em; }
 
 .reveal h2 {
   font-size: 2.11em; }
@@ -221,14 +255,14 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #00008B;
+  color: #F15F63;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #0000f1;
+  color: #1E0A6E;
   text-shadow: none;
   border: none; }
 
