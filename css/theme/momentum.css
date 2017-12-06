@@ -155,7 +155,7 @@ body {
   list-style-type: decimal; }
 
 .reveal ul {
-  list-style-type: none; }
+  list-style-type: circle; }
 
 .reveal ul ul,
 .reveal ul ol,
