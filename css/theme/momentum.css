@@ -17,6 +17,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   float: right;
 }
 
+.reveal .short-image-attribution {
+  display: block;
+  font-size: .5em;
+  float: none;
+}
+
 .reveal .monospace {
   font-family: Courier, Monaco, monospace;
 }
