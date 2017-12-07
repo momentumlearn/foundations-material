@@ -33,6 +33,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   bottom: 10px;
 }
 
+.reveal .slide-width {
+  width: 80%;
+}
+
 
 /* BRAND COLORS FOR TEXT */
 .reveal .brand-blue {
@@ -211,10 +215,12 @@ body {
 
 .reveal pre code {
   display: block;
-  padding: 5px;
+  padding: 10px;
   overflow: auto;
+  font-size: 2em;
+  line-height: 1.2em;
   max-height: 400px;
-  word-wrap: normal; }
+  overflow-wrap: break-word; }
 
 .reveal table {
   margin: auto;
