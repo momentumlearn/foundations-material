@@ -264,6 +264,10 @@
             </ul>
         </section>
         <section>
+          <h2>CODE BREAK</h2>
+          <p>Make a variable called “temperature”. Write some code to tell you to put on a coat if it is below 55 degrees. Log your output to the console.</p>
+        </section>
+        <section>
           <h3>If/Else</h3>
           <p>Add more branches to your logic with <span class="monospace">else</span> and <span class="monospace">else if</span></p>
           <pre><code>
@@ -285,8 +289,34 @@
           <aside class="notes">Demo in the console and explain that only one of the branches will be run. Explain that<span class="monospace">else</span> branches are optional, and it is possible to make it so that nothing runs.</aside>
         </section>
         <section>
-          <h2>CODE BREAK</h2>
-          <p>Make a variable called “temperature”. Write some code to tell you to put on a coat if it is below 55 degrees. Log your output to the console.</p>
+          <h3>Logical operators</h3>
+            <ul>
+              <li>
+                <span class="bold">And</span>: both a and b
+                <pre><code>a &amp;&amp; b</code></pre>
+              </li>
+              <li>
+                <span class="bold">Or</span>: a or b
+                <pre><code>a || b</code></pre>
+              </li>
+              <li>
+                <span class="bold">Not</span>: not a
+                <pre><code>!a</code></pre>
+              </li>
+            </ul>
+        </section>
+        <section>
+          <h3>How to Use Logical Operators</h3>
+            <p>These operators let you combine conditions.</p>
+            <pre><code data-trim>
+              var age = 19;
+              var usCitizenship = true;
+            if (age &gt;= 18 &amp;&amp; usCitizenship) {
+              console.log ('You are eligible to vote!');
+            } else {
+              console.log ('You can't vote yet!);
+            }
+            </code></pre>
         </section>
         <section>
           <h2>HOMEWORK</h2>
