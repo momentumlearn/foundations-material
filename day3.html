@@ -124,19 +124,180 @@
           </aside>
         </section>
         <section>
-          <h3>Variables</h3>
+          <h2>Variables</h2>
           <img src="images/cat-boxes-imgur.jpg" id="cat-boxes-imgur">
           <label for="cat-boxes-imgur" class="short-image-attribution" style="float:none;">courtesy of <a href="imgur.com/YJDNSHu">Imgur</a></label>
           <aside class="notes">
-            <p>We can think of variables as boxes that hold some kind of data and make that data available for reuse later.</p>
+            <p>We can think of variables as boxes or containers that hold some kind of data and make that data available for reuse later. We can put data in that container, or change it, and use the value it contains wherever we need it.</p>
           </aside>
         </section>
-        <section data-background-image="images/js-buckets.jpg">
+        <section data-background-image="images/js-variables.jpg">
           <aside class="notes">
-            <p>Another metaphor for variables: buckets that hold data.</p>
             <p>We will cover data types in more detail in a few minutes, but two of the types we'll look at first are numbers and strings.</p>
-            <p>A string is a combination of letters, numbers, and special characters, surrounded by matching quote marks. </p>
+            <p>A string is a combination of letters, numbers, and special characters, surrounded by matching quote marks.</p>
+            <p>In the Chrome inspector, demo declaring variables and assigning numbers and string as values, showing how you can then use the variable in an expression.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>CODE BREAK</h2>
+          <p>Store some data in variables and output the values to the console or the browser window.</p>
+        </section>
+        <section>
+          <h2>Data Types in JavaScript</h2>
+          <div>
+            <ul class="slide-width">
+              <li><span class="monospace">String</span>
+                <pre><code>var userName = 'Hodor';</code></pre>
+              </li>
+              <li><span class="monospace">Number</span>
+                <pre><code>var numKingdoms = 7;</code></pre>
+              </li>
+              <li><span class="monospace">Boolean</span>
+                <pre><code>var winterIsComing = true;</code></pre>
+              </li>
+              <li><span class="monospace">undefined</span>
+                <pre><code>var dragons;</code></pre>
+              </li>
+              <li><span class="monospace">null</span>
+                <pre><code>var thronesWon = null;</code></pre>
+              </li>
+            </ul>
+          </div>
+        <aside class="notes">
+          <ul>
+            <li>String; string of characters</li>
+            <li>Number: integer or floating point</li>
+            <li>Boolean: true or false</li>
+            <li>value that hasn't been defined</li>
+            <li>an explicitly empty value</li>
+          </ul>
+        </aside>
+        </section>
+        <section>
+            <h2>String concatenation</h2>
+            <p>Combine strings with the <span class="monospace">+</span> operator:
+              <pre><code data-trim>
+                "This string can be combined " + "with this string."
+                var partOfAString = "Fun with "
+                partOfAString + "strings!"
+              </code></pre>
+        </section>
+        <section>
+          <h2>Template literals</h2>
+          <p>An even fancier way to combine strings:</p>
+          <pre><code data-trim>
+            var favoriteThing = "avocado"
+            `My favorite thing is ${ favoriteThing }`
+          </code></pre>
+        </section>
+        <section>
+          <h2>CODE BREAK</h2>
+          <p>Try out working with strings and variables in your JavaScript console!</p>
+          <p>In your JS file, see if you can write a Mad-Lib style sentence using variables to fill in the blanks. For instance, this could be one about Animal Fun Facts:</p>
+          <p>"________ have a reputation as ___________ animals. Research shows that they are _________. A pack of _________ can be as large as _________. They eat _________ and _________. They commonly live in ____________. "</p>
+        </section>
+        <section>
+          <h2>Conditionals</h2>
+          <p><span class="monospace">if/else</span> statements let you add logical "flow" to your code.</p>
+          <p>Lines of code inside the brackets are run or not run based on a condition.</p>
+            <pre><code data-trim>
+              if (condition) {
+                // this code will be run
+              }
+            </code></pre>
+            <pre><code data-trim>
+              var pets = 5;
+              if (pets &gt; 0) {
+                console.log ('You have some pets!');
+              }
+            </code></pre>
+          <aside class="notes">
+            <p>Take some time to explain control flow using a traditional flow chart on the whiteboard. The concept of "if this, then that" should be familiar, so make that analogy.</p>
+            <p>Review the concept of an expression in JS: the condition inside the parens is evaluated to a Boolean. You can show this in the console. This will also be an introduction to comparison operators in JS.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>Comparison Operators</h2>
+            <ul>
+              <li>
+                <span class="bold">Equality</span> true if a is equal to b
+                <pre><code>a == b</code></pre>
+              </li>
+              <li>
+                <span class="bold">Identity (Strict Equality)</span>: true if a is equal to be and of the same data type
+                <pre><code>a === b</code></pre>
+              </li>
+              <li>
+                <span class="bold">Inequality</span>: true if a is NOT equal to b, or they are not the same type
+                <pre><code>a != b</code></pre>
+              </li>
+            </ul>
+            <pre><code>
+              12 == 12      // true
+              "12" === 12   // false
+              12 != 12      // false
+            </code></pre>
+            <aside class="notes">
+              <p>Demo some of these examples in the console.</p>
+              <p>Remind students to watch out for mixing up assignment and equality comparison!</p>
             </aside>
+        </section>
+        <section>
+          <h2>More Comparison Operators</h2>
+            <ul>
+              <li>
+                <span class="bold">Greater Than</span>: true if a is greater than b
+                <pre><code>a &gt; b</code></pre>
+              </li>
+              <li>
+                <span class="bold">Less Than</span>: true if a is less than b
+                <pre><code>a &lt; b</code></pre>
+              </li>
+              <li>
+                <span class="bold">Greater Than or Equal To</span>: true if a is greater than or equal to b
+                <pre><code>a &gt;= b</code></pre>
+              </li>
+              <li>
+                <span class="bold">Less Than or Equal To</span>: true if a is less than or equal to b
+                <pre><code>a &lt;= b</code></pre>
+              </li>
+            </ul>
+        </section>
+        <section>
+          <h3>If/Else</h3>
+          <p>Add more branches to your logic with <span class="monospace">else</span> and <span class="monospace">else if</span></p>
+          <pre><code>
+            if (condition) {
+              // do this thing
+            } else {
+              // do this other thing
+            }
+          </code></pre>
+          <pre><code>
+            if (condition) {
+              // do this thing
+            } else if (differentCondition) {
+              // do this different thing
+            } else {
+              // do some other thing
+            }
+          </code></pre>
+          <aside class="notes">Demo in the console and explain that only one of the branches will be run. Explain that<span class="monospace">else</span> branches are optional, and it is possible to make it so that nothing runs.</aside>
+        </section>
+        <section>
+          <h2>CODE BREAK</h2>
+          <p>Make a variable called “temperature”. Write some code to tell you to put on a coat if it is below 55 degrees. Log your output to the console.</p>
+        </section>
+        <section>
+          <h2>HOMEWORK</h2>
+            <p>Modify your “wear a coat” code for these conditions:</p>
+            <ul>
+              <li>If it's less than 55 degrees, wear a coat.</li>
+              <li>If it's less than 40 degrees, wear a coat and a hat.</li>
+              <li>If it's less than 0 degrees, stay inside.</li>
+              <li>Otherwise, wear whatever you want.</li>
+            </ul>
+            <p>BONUS: Add code to wear a waterproof coat and/or boots if it is raining or snowing! How would you code this complexity?</p>
         </section>
       </div>
       <footer class="footer">
