@@ -26,7 +26,7 @@
       <div class="slides">
         <section>
           <h1>Coding Basics</h1>
-          <h2>More JavaScript</h2>
+          <h2 class="brand-teal">More JavaScript</h2>
         </section>
         <section>
           <h2>Today's Learning Objectives</h2>
@@ -35,6 +35,153 @@
               <li>Loops</li>
               <li>Functions and arguments</li>
             </ul>
+        </section>
+        <section>
+          <h3>Arrays</h3>
+          <p>Arrays are like lists for multiple values. Values are listed inside square brackets (<span class="monospace">[]</span>) and separated by commas.</p>
+          <pre><code data-trim>
+            var emptyArray = [];
+            var arrayOfNumbers = [2, 4, 6, 8];
+            var arrayOfStrings = ["cats", "dogs", "hamsters"];
+            var arrayOfDifferentStuff = [23, null, "octopus", true];
+            var arrayOfArrays = [arrayOfNumbers, arrayOfStrings];
+          </code></pre>
+          <aside class="notes">Ask students to run this code themselves in their console. What would arrayOfArrays look like when eval'd?</aside>
+        </section>
+        <section>
+          <h3>Using Arrays</h3>
+          <p>Find out how many values are in an array:</p>
+            <pre><code data-trim>
+              var colors = ["red", "green", "blue"];
+              colors.length  
+            </code></pre>
+          <p>You can also retrieve values from an array:</p>
+            <pre><code data-trim>
+              var firstColor = colors[0];
+              var lastColor = colors[3];  
+            </code></pre>
+          <aside class="notes">
+            <p>Demo arrays in the console and/or on the whiteboard. Show how items can be added or changed. Explain zero-indexing.</p>
+          </aside>
+        </section>
+        <section>
+          <h3>CODE BREAK</h3>
+          <p>Write a shopping list of the foods you need to make your favorite recipe as an array.</p>
+          <p>Can you access the second and third items in your list and output them to the console?</p>
+        </section>
+        <section>
+          <h3>Loops</h3>
+          <p>A loop is a code structure that lets us repeat a task until a certain condition is met.</p>
+          <p><span class="monospace">For</span> loops are commonly used to count a certain number of times (iterations) to repeat a task.</p>
+          <pre><code data-trim>
+            for ([initial value]; [condition]; [final expression]) {
+              // do this thing
+            }
+          </code></pre>
+          <pre><code data-trim>
+            // count 1 to 10
+            for (var i = 1; i <= 10; i++) {
+              console.log(i);
+            }
+          </code></pre>
+          <aside class="notes">
+            <p>Spend time explaining what each part does. The concept of iteration is confusing at first!</p>
+            <p>It is useful to explain that <span class="monospace">i++</span> is equivalent to <span class="monospace">i = i + 1</span></p>
+          </aside>
+        </section>
+        <section>
+          <h3>CODE BREAK</h3>
+          <p>Run the code from the preceeding slide in your console.</p>
+          <p>Experiment with changing parts of the expressions.</p>
+          <p>Try writing a for loop that will output the 9 times table to the <console class=""></console></p>
+          <p>(e.g., <span class="monospace">9 x 1</span> through <span class="monospace">9 x 12</span>) </p>
+        </section>
+        <section>
+          <h3>Objects</h3>
+          <p>An object in JavaScript is a more complex data structure that can store pairs of keys and values. It is a little like a dictionary.</p>
+          <pre><code data-trim>
+            var anObject = {
+              key: value,
+              key: value
+            };
+          </code></pre>
+          <pre><code data-trim>
+            var aboutMe = {
+              hometown: "New York, NY",
+              almaMater: "UNC",
+              likes: ["avocadoes", "chihuahuas", "code"],
+              zodiacSign: "Scorpio"
+            };
+          </code></pre>
+          <aside class="notes">Demo examples in the console. Note comma-separated values, not semicolons.</aside>
+        </section>
+        <section>
+          <h3>Accessing Object Data</h3>
+            <p>You can retrieve values using "dot notation"</p>
+            <pre><code data-trim>
+              var aboutMe = {
+                hometown: "New York, NY",
+                almaMater: "UNC",
+                likes: ["avocadoes", "chihuahuas", "code"],
+                zodiacSign: "Scorpio"
+              };
+              var myHometown = aboutMe.hometown;
+            </code></pre>
+          <p>...or using "bracket notation" (like arrays)</p>
+            <pre><code data-trim>
+              var mySign=aboutMe['zodiacSign'];
+            </code></pre>
+          <aside class="notes">Demo accessing object data in the console.</aside>
+        </section>
+        <section>
+          <h3>CODE BREAK</h3>
+          <p>Create an object in your JS file that holds information about a book. It should have properties for:</p>
+            <ul>
+               <li>the title (a string)</li>
+               <li>author (a string)</li>
+               <li>alreadyRead (a boolean indicating if you read it yet)</li>
+             </ul> 
+             <p>Add other properties if you like.</p>
+        </section>
+        <section>
+          <h3>Functions</h3>
+          <p>Functions are reusable pieces of code. They can be named, like variables, and called when you need them.</p>
+          <pre><code data-trim>
+            function chihuahuaFacts() {
+              console.log("Chihuahuas are the smallest of all dogs.")
+              console.log("Chihuahuas can be 'apple-headed' or 'deer-headed.'")
+            }
+          </code></pre>
+          <aside class="notes">Spend time explaining the syntax of a function. Run it in the console to show the difference between declaring and calling a function.</aside>
+        </section>
+        <section>
+          <h3>Functions with Arguments</h3>
+          <p>Functions can accept one or more input values, called "arguments."</p>
+          <pre><code data-trim>
+            function callYourDog(dogName){
+              console.log("Come here, " + dogName  + "!"); 
+            }
+          </code></pre>
+          <aside class="notes">
+            <p>Demo this function in the console. Demo writing a function that accepts more than a single argument.</p>
+          </aside>
+        </section>
+        <section>
+          <h3>CODE BREAK</h3>
+          <p>Write a function to calculate someone's age and output the result to the console in a string, like "You are 52 years old!".</p>
+          <p>It should accept a single argument: a year of birth.</p>
+        </section>
+        <section>
+          <h3>HOMEWORK 1</h3>
+          <p>Create more book objects and store them in an array.</p>
+          <p>Write a loop that iterates through the array of books and logs each book title to the console.</p>
+          <p>BONUS: Write a function that creates a reading list from of books you haven't read and outputs that list to the console.</p>
+        </section>
+        <section>
+          <h3>HOMEWORK 2</h3>
+          <p>Write a function that converts temperature from Farenheit to Celsius.</p>
+          <p>To convert fahrenheit to celsius, deduct 32, then multiply by 5, then divide by 9</p>
+          <p>BONUS: write a second function that converts from Celsius to Farenheit.</p>
         </section>
       </div>
       <footer class="footer">
