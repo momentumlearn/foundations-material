@@ -37,6 +37,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   width: 80%;
 }
 
+.reveal .bold {
+  font-weight: 600;
+}
+
 
 /* BRAND COLORS FOR TEXT */
 .reveal .brand-blue {
@@ -215,7 +219,7 @@ body {
 
 .reveal pre code {
   display: block;
-  padding: 10px;
+  padding: 5px;
   overflow: auto;
   font-size: 2em;
   line-height: 1.2em;
