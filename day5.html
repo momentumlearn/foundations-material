@@ -37,7 +37,7 @@
               <li>handling browser events with JavaScript</li>
             </ul>
         </section>
-        <section data-background-image="fe-components.jpg">
+        <section data-background-image="images/fe-components.jpg">
           <aside class="notes">
             <p>Provide a context for the DOM by reminding students about the role of JS in conjunction with HTML &amp; CSS.</p>
           </aside>
@@ -47,10 +47,68 @@
           <blockquote>
             The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
           </blockquote>
+          <aside class="notes">
+          <p><a href="https://css-tricks.com/dom/">This CSS-tricks article</a> is a helpful resource for explaining this tricky concept to students.</p>
+          <p>tl;dr: The browser receives your HTML + CSS + JS and creates a model of the page -- this is the DOM. The takeaway for students should be to understand the difference between what they write in their HTML files and what the browser will use to render what we see in the browser window.</p>
+          <p>JS is the language the browser uses to interact with this model -- the programming interface -- to make changes to the page.</p>
+        </aside>
+        </section>
+        <section>
+          <h2>The DOM Tree and DOM Nodes</h2>
+          <img src="images/dom-tree.png">
+          <aside class="notes">
+            <p>What we know as HTML elements become "nodes" in the DOM. These are the things we can access and modify with JS.</p>
+          </aside>
+        </section>
+        <section>
+         <h2>The Window Object</h2>
+         <p>The document object is loaded into the browser window, and at that point the nodes are accessible to you through JavaScript.</p>
+          <pre><code data-trim>
+            window.document
+          </code></pre>
+          <aside class="notes">
+            <p>So the DOM is a model of the Document Object. A document is loaded to the window, and is accessible as a property on <span>window</span>, or by the shorthand <span class="monospace">document.</span></p>
+            <p>Demo <span>window.document</span> in the Chrome console. Students can do the same.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>Selecting DOM Nodes</h2>
+          <p>You can find and "grab" element on the page (DOM nodes) with JavaScript.</p>
+          <pre><code data-trim>
+            &lt;img id=&quot;kittenPic&quot; class=&quot;illustration&quot; src=&quot;https://source.unsplash.com/200x300/?kitten&quot; alt=&quot;kitten&quot;/&gt;
+          </code></pre>
+          <aside class="notes">
+            <p>Take time to explain the concept of "selecting." Why would we want to do this? What things would we want to think about when trying to find elements? What are the ways we could find/differentiate elements on the page?</p>
+          </aside>
+        </section>
+        <section>
+          <h2>Selecting DOM Nodes</h2>
+          <pre><code data-trim>var image = document.getElementById('kittenPic');</pre></code>
+          <div class="fragment">
+            <pre><code data-trim>document.getElementsByClassName('illustration');</pre></code>
+          </div>
+          <div class="fragment">
+            <pre><code data-trim>document.getElementsByTagName('img');</pre></code>
+          </div>
+          <aside class="notes">
+            <p>Walk through the syntax of the different ways to select DOM elements, tying back to some of the things students may have said.</p>
+            <p>Make note of the difference between "getElement" and "getElements" -- this is a common gotcha for new students. To select a single node when an array (technically an <span class="monospace"> HTMLCollection</span>) is returned, remind students about bracket notation.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>CODE BREAK</h2>
+          <p>Add an image element to your page if you don't already have one. Load the page in the browser and open the Console.</p>
+          <p>In the console, <span class="brand-salmon bold">find the DOM node containing that element</span>. Store it in a variable.</p>
+          <p><span class="brand-salmon bold">Practice selecting other elements</span> and inspecting them in the console. What does it look like when you have more than one element?</p>
+        </section>
+        <section>
+          <h3>Changing Things in the DOM</h3>
+          <p>Now that we know how to find DOM elements, we can make changes to them.</p>
+
         </section>
       </div>
       <footer class="footer">
-        <img src="images/logo-main.png" alt="">
+        <img src="images/logo-main.png" alt="momentum-logo">
       </footer>      
     </div>
     <script src="lib/js/head.min.js"></script>
