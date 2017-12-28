@@ -27,7 +27,7 @@
       <div class="slides">
         <section>
           <h1>Coding Basics</h1>
-          <h2>Day Five</h2>        
+          <h2>Day Five</h2>
         </section>
         <section>
           <h2>Today we'll learn about...</h2>
@@ -107,11 +107,11 @@
         <section>
           <h2>getElement vs. getElements</h2>
           <pre><code data-trim>
-            document.getElementById('uniqueID'); 
+            document.getElementById('uniqueID');
               // returns only one node
           </code></pre>
           <pre><code data-trim>
-            document.getElementsByClassName('product-description'); 
+            document.getElementsByClassName('product-description');
               // returns an array-like collection of nodes
             document.getElementsByClassName('product-description')[0];
               // ah ha! now you have only one node!
@@ -159,7 +159,7 @@
               &lt;img id=&quot;oceanPic&quot; class=&quot;illustration&quot; src=&quot;https://source.unsplash.com/200x300/?ocean&quot; alt=&quot;the sea&quot;/&gt;
            </code></pre>
             <p>Open the console, and first select that DOM node. </p>
-            <p>Change the <span class="code-snippet">src</span> attribute so that a different image will be displayed.</p> 
+            <p>Change the <span class="code-snippet">src</span> attribute so that a different image will be displayed.</p>
             <p>Add or change the style attribute, using whatever properties you'd like.</p>
             <p>Experiment with selecting and changing other DOM nodes in your page!</p>
         </section>
@@ -181,7 +181,7 @@
               // First select where you want to place the new content
             var newElement = document.createElement('div');
              // Create the new element
-            existingElement.appendChild(newElement);   
+            existingElement.appendChild(newElement);
               // Add that element to the DOM
           </code></pre>
         </section>
@@ -195,7 +195,7 @@
             parentElement = elementToRemove.parentNode
             // what will this do?
             parentElement.removeChild(elementToRemove);
-            // what is happening here?     
+            // what is happening here?
           </code></pre>
           <aside class="notes">You could mention jQuery and/or React here as other ways to manipulate the DOM. </aside>
         </section>
@@ -239,7 +239,7 @@
             &lt;button id="cancelButton" onclick="confirmCancel()"&gt;
               Cancel order
             &lt;/button&gt;
-            
+
             &lt;script&gt;
               function confirmCancel(){
                 alert('Are you sure you want to cancel?');
@@ -277,7 +277,7 @@
       </div>
       <footer class="footer">
         <img src="images/logo-main.png" alt="momentum-logo">
-      </footer>      
+      </footer>
     </div>
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
