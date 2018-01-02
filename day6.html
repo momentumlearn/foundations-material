@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/momentum.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Foundations</h1>
+          <h2 class="brand-teal">Intro to the Command Line</h2>
+        </section>
+        <section>
+          <h2>Today we'll learn about...</h2>
+            <ul>
+              <li>What the command line is</li>
+              <li>File navigation</li>
+              <li>Basic commands and utilities</li>
+              <li>Using the command line effectively</li>
+            </ul>
+        </section>
+        <section data-background-image="images/matrix.jpg">
+          <h1 style="color: #F8F8FF">The Shell</h1>
+          <aside class="notes">
+            <p>The shell: a text-based user interface that gives you access to the operating system. We call that interface "the command line".</p>
+            <p>We're using a Unix shell called the Bash shell, which is the default on most Linux systems and Mac OS.</p>
+            <p>Demo opening the terminal (which is just a program that gives us the command line) and have students follow along, opening their own terminals.</p>
+            <p>For students with Windows machines, have them use glitch.com. Start a new project and then from the project menu, click "Advanced Options", then choose "Open Console".</p>
+          </aside>
+        </section>
+        <section>
+          <h2>The Prompt</h2>
+          <p>The prompt is the place in the terminal where you type commands.</p>
+          <p>It usually shows your computer's name (<span class="code-snippet">hostname</span>) and your username</p>
+          <pre><code data-trim>$ Alexs-MacBook-Pro:~ alexrandall$ pwd</code></pre>
+          <p>When commands are entered successfully, you don't always receive feedback that something happened. The usual indication that everything is OK is the appearance of the prompt.</p>
+        </section>
+        <section>
+          <h2>Commands</h2>
+          <p>The structure of commands follows a consistent pattern.</p>
+          <p>Options and arguments are not always required, but different commands have different usages.</p>
+          <pre><code data-trim>
+            $ command [-options] [arguments]
+          </code></pre>
+          <aside class="notes">
+            <p>A good example command to demo is <span class="code-snippet">cal</span>. Try entering it without arguments first.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>Arguments</h2>
+          <p>Arguments are information included with a command to modify its behavior.</p>
+          <p>One or more arguments may usually be included, separated by whitespace.</p>
+          <pre><code data-trim>
+            $ cal Nov 2018
+          </code></pre>
+        </section>
+        <section>
+          <h2>Options</h2>
+          <pre><code data-trim>
+            $ cal may
+              // doesn't work because the command require two arguments
+            $ cal -m may
+              // passing the option -m lets you use a single argument for the month
+          </code></pre>
+        </section>
+        <section>
+          <h2><span class="code-snippet">man</span> Pages</h2>
+          <p>How do you know what a command does, or what arguments and options a command can accept?</p>
+          <p>The <span class="code-snippet">man</span> (short for "manual") command accepts the name of other commands as arguments.</p>
+          <pre><code data-trim>
+            $ man cal
+          </code></pre>
+          <p><span class="code-snippet">man</span> pages use another utility called <span class="code-snippet">less</span> to display information. Check out the <span class="code-snippet">man</span> pages on it!</p>
+            <p>To get back to the prompt from <span class="code-snippet">less</span>, press "Q".</p>
+          <aside class="notes">You can demo this with any command, and use it throughout the lesson.</aside>
+        </section>
+        <section>
+          <h2>How to get back to the prompt</h2>
+          <p>If the command line hangs or you want to stop a process that is ongoing, use the keystroke <span class="code-snippet">Ctrl-C</span>.</p>
+          <p>Sometimes you'll see it as <span class="code-snippet">^C</span>.</p>
+          <p>Try this out by using the following command:</p>
+          <pre><code data-trim>
+            $ yes
+          </code></pre>
+          <p><span class="brand-salmon">Hint:</span> You'll need to stop this process yourself...</p>
+        </section>
+        <section>
+          <h2>Repeating and editing commands</h2>
+          <p><span class="bold brand-salmon">Up-arrow</span> cycles through commands you've typed previously in the same session.</p>
+          <p><span class="bold brand-salmon">Left-arrow</span> and <span class="bold brand-salmon">Right-arrow</span> let you move around the line and edit what you've typed.</p>
+          <p>The command isn't submitted until you hit <span class="bold brand-salmon">Enter/ Return</span>.</p>
+          <aside class="notes">You could also demo using Ctrl-A (move to the beginning of the line), Ctrl-E (move to the end of the line), and Ctrl-U (deleting everything to the left of the cursor)</aside>
+        </section>
+        <section>
+          <h2>sudo</h2>
+          <h3 class="brand-salmon">Use with caution!</h3>
+          <p>This command, short for "super user do", appended before you enter any other command, gives you root privileges.</p>
+          <p>That is, you can execute any command, including modifying sensitive system files.</p>
+          <pre><code data-trim>
+            $ sudo gem install bundler
+          </code></pre>
+        </section>
+        <section>
+          <h2>Directories</h2>
+          <p>A directory is what you know as a folder.</p>
+          <p>You can see your current working directory (the one you are "in") with <span class="code-snippet">pwd</span>.</p>
+          <p>You can change your working directory with <span class="code-snippet">cd</span>.</p>
+            <pre><code data-trim>
+              $ pwd
+              $ cd ..
+              $ cd ../..
+              $ cd directory_name
+            </code></pre>
+          <aside class="notes">
+            <p>Consider drawing a file tree on the whiteboard to help students visualize how things are related and nested. They have already seen a DOM tree in this class, and this is similar.</p>
+            <p>You can also mention the . shortcut in addition to ..</p>
+          </aside>
+        </section>
+        <section>
+          <h2>root and home directories</h2>
+          <pre><code data-trim>
+            $ cd /
+            $ cd ~
+            $ cd
+          </code></pre>
+          <aside class="notes">
+            <p>The home directory on Mac OS is /Users/username, and on Linux it is /Home/username.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>View Directory Contents</h2>
+          <pre><code data-trim>
+            $ ls
+            $ ls -l
+            $ ls -a
+            $ ls -al
+          </code></pre>
+          <aside class="notes">
+            <p>Have students try these out to see what they do.</p>
+            <p></p>
+          </aside>
+        </section>
+        <section>
+          <h2>Make and Remove Directories</h2>
+          <pre><code data-trim>
+            $ mkdir new_directory
+            $ rmdir empty_directory
+            $ rm -rf directory_full_of_stuff
+          </code></pre>
+          <aside class="notes">
+            <p>Make sure to warn students about being careful with that last command! There is no undo if you accidentally delete your root directory.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>CODE BREAK</h2>
+          <p>Let's practice using the command line!</p>
+          <p>Don't forget about using the arrow keys to find previously typed commands.</p>
+          <ol>
+            <li>Navigate to your home directory</li>
+            <li>Create a momentum/foundations directory path</li>
+            <li>Navigate to that directory</li>
+            <li>Create a command_line directory</li>
+            <li>Navigate up two directories</li>
+            <li>Explore around your directories, viewing their contents</li>
+            <li>Return to your home directory</li>
+            <li>Verify what your current working directory is</li>
+            <li>Remove the momentum/foundations/command_line path</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Clearing the terminal</h2>
+          <p>Sometimes the screen can feel cluttered. To clear your terminal screen you can:</p>
+          <ul>
+            <li>Type <span class="code-snippet">clear</span> at the prompt</li>
+            <li><span class="bold brand-salmon">Command-K</span> on Mac OS</li>
+          </ul>
+          <p>This doesn't clear your command history; it just makes your screen look neater!</p>
+        </section>
+        <section>
+          <h2>Working with Files</h2>
+            <pre><code data-trim>
+              $ touch new-file.txt
+              $ open index.html
+              $ cp index.html main.html
+              $ mv index.html ~/projects/website/index.html
+              $ rm new-file.txt
+            </code></pre>
+            <aside class="notes">
+              <p>Go over what these commands do and the way arguments work with these commands: first arg is origin, 2nd arg is destination. </p>
+              <p>Use man pages for reference.</p>
+            </aside>
+        </section>
+        <section>
+          <h2>Paths</h2>
+          <p>Spaces and capitalization DO matter!</p>
+          <p>Don't put spaces in your file or directory names -- they have to be escaped when typed on the command line.</p>
+          <pre><code data-trim>
+            $ cd My\ Project\ Folder
+            $ cd my_project_folder
+          </code></pre>
+        </section>
+        <section>
+          <h2>Relative and Absolute Paths</h2>
+            <p>Paths indicate the "address" of a file or directory.</p>
+            <pre><code data-trim>
+              $ cd projects/ruby/blackjack
+              $ cd /Users/myusername/code/projects/ruby/go-fish
+            </code></pre>
+            <p><span class="brand-salmon bold">Relative paths</span> are relative to the current working directory.</p>
+            <p><span class="brand-salmon bold">Absolute paths</span> are relative to the root directory and begin with "/".</p>
+        </section>
+        <section>
+          <h2>Copy and Move Directories</h2>
+            <pre><code data-trim>
+              $ cp -R projects portfolio
+              $ mv projects ~/momentum/portfolio
+              $ mv -i oldname newname
+            </code></pre>
+            <p>The <span class="code-snippet">mv</span> command is useful for renaming files and directories. The -i option is a safeguard against an accidental overwrite.</p>
+        </section>
+        <section>
+          <h2>Viewing File Contents</h2>
+            <pre><code data-trim>
+              $ cat ~/.bash_profile
+            </code></pre>
+        </section>
+        <section>
+          <h2>Opening a File</h2>
+            <p>You can open the default text editor, or any desktop app on a Mac, from the command line.</p>
+            <pre><code data-trim>
+              $ open -t newfile.txt
+              $ open -a Atom index.html
+            </code></pre>
+        </section>
+        <section>
+          <h2>CODE BREAK</h2>
+          <p>Let's practice working with files from the command line.</p>
+          <ol>
+            <li>Create a new directory called "momentum" and make that your working directory.</li>
+            <li>Create two text files and name them "file1" and "file2". Don't forget the file extension!</li>
+            <li>Open file1 in an editor and add a sentence or two to it, saving your changes.</li>
+            <li>Copy file1.txt to a third file.</li>
+            <li>Create a directory called "files" and move file 1 into it.</li>
+            <li>List the contents of the files directory without changing your current working directory.</li>
+            <li>Rename file1.txt to file_one.txt</li>
+            <li>Remove the files directory without deleting file_one.txt first.</li>
+            <li>Clear your terminal!</li>
+          </ol>
+        </section>
+        <section>
+          <h1>Cool CLI tricks</h1>
+        </section>
+        <section>
+          <h2>Word Count</h2>
+          <p>Count the lines, words, and characters in a file.</p>
+          <p>Try these out and see what they do!</p>
+          <pre><code data-trim>
+            $ man wc
+            $ wc -l file.txt
+            $ wc -m file2.txt
+            $ wc -w file3.txt
+          </code></pre>
+        </section>
+        <section>
+          <h2>Some things to try...</h2>
+          <p>Don't forget to check <span class="code-snippet">man</span> pages for each of these to find out how to really use them!</p>
+          <pre><code data-trim>
+            $ date
+            $ cal
+            $ whoami
+            $ uptime
+            $ history
+            $ say hello ${whoami}
+          </code></pre>
+        </section>
+        <section>
+          <h2>Processes &amp; disk space</h2>
+          <p>Check out what your CPU is working on and what your hard disk memory looks like!</p>
+          <pre><code data-trim>
+            $ top
+            $ ps
+            $ du
+          </code></pre>
+          <aside class="notes">
+            <p>Processes are instances of programs the computer is running in memory. Each process has a process id (PID) that you can see and access if you need to.</p>
+            <p>Students may have seen this type of information before if they have looked at Task Manager or Activity Monitor.</p>
+            <p>Have students try these out with you. They will need to use Crtl-C to get out of top.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>Piping</h2>
+          <p>You can send the output of one command as input to the next command using the pipe operator:</p>
+          <pre><code data-trim>
+            $ history | less
+          </code></pre>
+        </section>
+        <section>
+          <h2>Customizing your prompt</h2>
+          <p>You can do lots of fun things! Your prompt can be modified by setting a value for <span class="code-snippet">PS1</span> in your <span class="code-snippet">~/.bash_profile</span> (on a Mac) or <span class="code-snippet">~/.bash_rc</span>.</p>
+          <ul>
+            <li><a href="https://code.tutsplus.com/tutorials/how-to-customize-the-command-prompt--net-20586"> How to customize the prompt
+            </a></li>
+            <li><a href="http://bashrcgenerator.com/">Drag and drop interface for building a prompt</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Questions?</h1>
+        </section>
+      </div>
+      <footer class="footer">
+        <img src="images/logo-main.png" alt="momentum-logo">
+      </footer>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
