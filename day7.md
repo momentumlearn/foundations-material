@@ -13,6 +13,8 @@ The students should have one hour for this part, and they should work in pairs o
 
 The goal of the assignment is to review skills learned in this course, to have time working in class with an instructor there to help, and to challenge the students to stretch a bit further by trying to do some new things.
 
+You can give all these options to students, or choose what you think best for the class.
+
  ### Assignment options:
 * Return to something you built for homework during this course and work on it more during class. Ask questions and get help here! If you choose this option, you can choose to both work on the same project or each work on your own project, sharing what you've done and helping each other out!
 * Build a simple reference page about CSS. Choose one or more properties to demonstrate, and use JavaScript to illustrate what different properties do using user input for the property values. For instance, you could have information about the "background color" property with color values in a [select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select), so that when a user selects a color, the background color for some node in the DOM is changed. The page itself should have a nice layout and styling.
