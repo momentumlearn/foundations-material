@@ -122,26 +122,12 @@
           </aside>
         </section>
         <section>
-          <h3>Changing Things in the DOM</h3>
+          <h2>Changing Things in the DOM</h2>
           <p>Now that we know how to find DOM elements, we can make changes to them.</p>
             <pre><code data-trim>
               var mainImg = document.getElementById('main-image');
-              mainImg.getAttribute('src');
-                // what will this return?
-              mainImg.setAttribute('src', 'https://source.unsplash.com/200x300/?ocean');
-                // what will this do?
-              mainImg.setAttribute('style', 'border: 4px solid purple');
-                // what will this do?
-            </code></pre>
-        </section>
-        <section>
-          <h2>Changing Things in the DOM</h2>
-          <h4>Alternate Syntax</h4>
-          <p>We can do the same things using dot notation to get or set element attributes:</p>
-            <pre><code data-trim>
-              var mainImg = document.getElementById('main-image');
               mainImg.src
-                // This returns the same as calling 'mainImg.getAttribute('src');'
+                // what will this return?
               mainImg.src = 'https://source.unsplash.com/200x300/?ocean';
                 // sets the src attribute to this value
               mainImg.style.border = '4px solid purple';
