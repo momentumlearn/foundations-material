@@ -126,23 +126,26 @@
           <p>You can change your working directory with <span class="code-snippet">cd</span>.</p>
             <pre><code data-trim>
               $ pwd
-              $ cd ..
-              $ cd ../..
               $ cd directory_name
             </code></pre>
-          <aside class="notes">
-            <p>Consider drawing a file tree on the whiteboard to help students visualize how things are related and nested. They have already seen a DOM tree in this class, and this is similar.</p>
-            <p>You can also mention the . shortcut in addition to ..</p>
-          </aside>
         </section>
         <section>
-          <h2>root and home directories</h2>
-          <pre><code data-trim>
-            $ cd /
-            $ cd ~
-            $ cd
-          </code></pre>
+          <h2>Directory shortcuts</h2>
+            <p>Several special characters are used for shortcuts in navigating the file structure. You'll see them used often in paths.</p>
+            <p>The single dot <span class="code-snippet">.</span> represents the current directory.</p>
+            <p>The double dot <span class="code-snippet">..</span> represents the parent directory.</p>
+            <p>The forward slash <span class="code-snippet">/</span> by itself represents the root directory.</p>
+            <p>The tilde <span class="code-snippet">~</span> represents the home directory.</p>
+            <p>Try these out for yourself!</p>
+            <pre><code data-trim>
+              $ cd ..
+              $ cd ../..
+              $ cd /
+              $ cd ~
+              $ cd
+            </code></pre>
           <aside class="notes">
+            <p>Consider drawing a file tree on the whiteboard to help students visualize how things are related and nested. This is similar to the DOM tree they saw earlier in class.</p>
             <p>The home directory on Mac OS is /Users/username, and on Linux it is /Home/username.</p>
           </aside>
         </section>
@@ -224,9 +227,14 @@
             <pre><code data-trim>
               $ cd projects/ruby/blackjack
               $ cd /Users/myusername/code/projects/ruby/go-fish
+              $ cd ~/Documents/bash_commands.txt
+              $ cd ../study_notes
             </code></pre>
             <p><span class="brand-salmon bold">Relative paths</span> are relative to the current working directory.</p>
             <p><span class="brand-salmon bold">Absolute paths</span> are relative to the root directory and begin with "/".</p>
+            <aside class="notes">
+              <p>Ask students to recall the directory shortcuts covered earlier. What do these paths lead to?</p>
+            </aside>
         </section>
         <section>
           <h2>Copy and Move Directories</h2>
