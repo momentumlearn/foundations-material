@@ -13,10 +13,14 @@ The students should have one hour for this part, and they should work in pairs o
 
 The goal of the assignment is to review skills learned in this course, to have time working in class with an instructor there to help, and to challenge the students to stretch a bit further by trying to do some new things.
 
-You can give all these options to students, or choose what you think best for the class.
 
- ### Assignment options:
-* Return to something you built for homework during this course and work on it more during class. Ask questions and get help here! If you choose this option, you can choose to both work on the same project or each work on your own project, sharing what you've done and helping each other out!
+### Project Options
+
+Time is limited, so students should not use class time trying to decide what to do. You should choose one option that you think best for the class.
+
+
+* Build a webpage for a donut shop!
+  * _note to instructors:_ in the `day7-files` directory included in this repo, you'll find a completed site for your reference, a PDF of the completed page, a GIF demonstrating JS functionality that they can build into the site, and starter files with the project structure and assets.
+* Return to something you built for homework during this course and work on it more during class. Ask questions and get help here! If you choose this option, you can choose to both work on the same project or each work on your own project, sharing what you've done and helping each other out.
 * Build a simple reference page about CSS. Choose one or more properties to demonstrate, and use JavaScript to illustrate what different properties do using user input for the property values. For instance, you could have information about the "background color" property with color values in a [select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select), so that when a user selects a color, the background color for some node in the DOM is changed. The page itself should have a nice layout and styling.
 * HARD MODE Build a very simple JavaScript clock using the [Date object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date). It should look like a standard digital clock, showing the hour, minutes, and seconds. Bonus: change the background color at a certain interval.
-

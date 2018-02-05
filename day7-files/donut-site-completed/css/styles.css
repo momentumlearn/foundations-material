@@ -1,0 +1,175 @@
+* {
+  vertical-align: top;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica', Arial, Sans-serif;
+  line-height: 1.5;
+  color: #90172a;
+  background: ;
+
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: #B1d4cd;
+  padding-top: 20px;
+}
+
+header img {
+  border-radius: 50%;
+}
+
+header nav, header li {
+  display: inline-block;
+}
+
+nav ul {
+  margin-top: 20px;
+}
+
+nav ul a {
+  text-transform: uppercase;
+  color: #90172a;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.hero-banner {
+  height: 250px;
+  padding-top: 150px;
+  width: 100%;
+  background: url('../images/doughnuts.jpg') fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-banner h1 {
+  text-align: center;
+  font-size: 72px;
+  margin-top: 0;
+}
+
+.main {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.main .why-knot {
+  width: 55%;
+  display: inline-block;
+  padding-right: 40px;
+}
+
+#about {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.main .contact {
+  display: inline-block;
+  width: 38%;
+}
+
+.main .contact img {
+  margin: 0 auto;
+  width: 300px;
+  display: block;
+}
+
+.main .caption h4 {
+  text-align: center;
+}
+
+footer {
+  height: 370px;
+  background: #B1d4cd;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+footer .contact {
+  width: 47%;
+  padding-top: 28px;
+  display: inline-block;
+}
+
+footer .animation {
+  width: 47%;
+  display: inline-block;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+
+}
+
+
+.doughnut {
+  height: 300px;
+  width: 300px;
+  background: url('../images/footer-doughnut.png') no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
+.btn {
+  width: 170px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 4px;
+  line-height: 50px;
+  font-size: 18px;
+  background: #CF6480;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: #90172A;
+}
+
+
+.sprinkles {
+  display: none;
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../images/sprinkles.png') no-repeat;
+}
+
+.show {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
