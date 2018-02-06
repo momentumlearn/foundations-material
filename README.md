@@ -9,7 +9,7 @@
 
 This material uses [reveal.js](https://github.com/hakimel/reveal.js/) for slides. Refer to the reveal.js documentation for more information.
 
-Reveal.js uses HTML files to generate slides. The files `index.html`, and `day*.html` in this repository contain all the slides for the course.
+Reveal.js uses HTML files to generate slides. The files `index.html` and `day*.html` in this repository contain all the slides for the course.
 
 
 ## License
