@@ -104,7 +104,7 @@
             <script src="main.js"></script>
           </code></pre>
           <aside class="notes">
-            <p>Demo creating, linking, and loading a JS file to the HTML page from previous classes, and in here introduce <span class="monospace">console.log</span>, <span class="monospace">window.alert</span>, and/or <span class="monospace">document.write</span>. Show page source before and after JS script is loaded.</p>
+            <p>Demo creating, linking, and loading a JS file to the HTML page from previous classes, and in here introduce console.log, window.alert, and/or document.write. Show page source before and after JS script is loaded.</p>
           </aside>
         </section>
         <section>
@@ -146,24 +146,25 @@
           <h2>Data Types in JavaScript</h2>
           <div>
             <ul class="slide-width">
-              <li><span class="code-snippet">String</span>
+              <li><span class="bold brand-salmon">String</span>
                 <pre><code>var userName = 'Hodor';</code></pre>
               </li>
-              <li><span class="code-snippet">Number</span>
+              <li><span class="bold brand-salmon">Number</span>
                 <pre><code>var numKingdoms = 7;</code></pre>
               </li>
-              <li><span class="code-snippet">Boolean</span>
+              <li><span class="bold brand-salmon">Boolean</span>
                 <pre><code>var winterIsComing = true;</code></pre>
               </li>
-              <li><span class="code-snippet">undefined</span>
+              <li><span class="bold brand-salmon">undefined</span>
                 <pre><code>var dragons;</code></pre>
               </li>
-              <li><span class="code-snippet">null</span>
+              <li><span class="bold brand-salmon">null</span>
                 <pre><code>var thronesWon = null;</code></pre>
               </li>
             </ul>
           </div>
         <aside class="notes">
+          <p>Take a few minutes here to go through each and explain it.</p>
           <ul>
             <li>String; string of characters</li>
             <li>Number: integer or floating point</li>
@@ -220,19 +221,19 @@
           <h2>Comparison Operators</h2>
             <ul>
               <li>
-                <span class="bold">Equality</span> true if a is equal to b
+                <span class="bold brand-salmon">Equality</span> true if a is equal to b
                 <pre><code>a == b</code></pre>
               </li>
               <li>
-                <span class="bold">Identity (Strict Equality)</span>: true if a is equal to be and of the same data type
+                <span class="bold brand-salmon">Identity (Strict Equality)</span>: true if a is equal to be and of the same data type
                 <pre><code>a === b</code></pre>
               </li>
               <li>
-                <span class="bold">Inequality</span>: true if a is NOT equal to b, or they are not the same type
+                <span class="bold brand-salmon">Inequality</span>: true if a is NOT equal to b, or they are not the same type
                 <pre><code>a != b</code></pre>
               </li>
             </ul>
-            <pre><code>
+            <pre><code data-trim>
               12 == 12      // true
               "12" === 12   // false
               12 != 12      // false
@@ -246,19 +247,19 @@
           <h2>More Comparison Operators</h2>
             <ul>
               <li>
-                <span class="bold">Greater Than</span>: true if a is greater than b
+                <span class="bold brand-salmon">Greater Than</span>: true if a is greater than b
                 <pre><code>a &gt; b</code></pre>
               </li>
               <li>
-                <span class="bold">Less Than</span>: true if a is less than b
+                <span class="bold brand-salmon">Less Than</span>: true if a is less than b
                 <pre><code>a &lt; b</code></pre>
               </li>
               <li>
-                <span class="bold">Greater Than or Equal To</span>: true if a is greater than or equal to b
+                <span class="bold brand-salmon">Greater Than or Equal To</span>: true if a is greater than or equal to b
                 <pre><code>a &gt;= b</code></pre>
               </li>
               <li>
-                <span class="bold">Less Than or Equal To</span>: true if a is less than or equal to b
+                <span class="bold brand-salmon">Less Than or Equal To</span>: true if a is less than or equal to b
                 <pre><code>a &lt;= b</code></pre>
               </li>
             </ul>
@@ -270,14 +271,14 @@
         <section>
           <h3>If/Else</h3>
           <p>Add more branches to your logic with <span class="code-snippet">else</span> and <span class="code-snippet">else if</span></p>
-          <pre><code>
+          <pre><code data-trim>
             if (condition) {
               // do this thing
             } else {
               // do this other thing
             }
           </code></pre>
-          <pre><code>
+          <pre><code data-trim>
             if (condition) {
               // do this thing
             } else if (differentCondition) {
@@ -286,21 +287,21 @@
               // do some other thing
             }
           </code></pre>
-          <aside class="notes">Demo in the console and explain that only one of the branches will be run. Explain that<span class="monospace">else</span> branches are optional, and it is possible to make it so that nothing runs.</aside>
+          <aside class="notes">Demo in the console and explain that only one of the branches will be run. Explain that `else` branches are optional, and it is possible to make it so that nothing runs.</aside>
         </section>
         <section>
           <h3>Logical operators</h3>
             <ul>
               <li>
-                <span class="bold">And</span>: both a and b
+                <span class="bold brand-salmon">And</span>: both a and b
                 <pre><code>a &amp;&amp; b</code></pre>
               </li>
               <li>
-                <span class="bold">Or</span>: a or b
+                <span class="bold brand-salmon">Or</span>: a or b
                 <pre><code>a || b</code></pre>
               </li>
               <li>
-                <span class="bold">Not</span>: not a
+                <span class="bold brand-salmon">Not</span>: not a
                 <pre><code>!a</code></pre>
               </li>
             </ul>
@@ -311,11 +312,11 @@
             <pre><code data-trim>
               var age = 19;
               var usCitizenship = true;
-            if (age &gt;= 18 &amp;&amp; usCitizenship) {
-              console.log("You are eligible to vote!");
-            } else {
-              console.log("You can't vote yet!");
-            }
+              if (age &gt;= 18 &amp;&amp; usCitizenship) {
+                console.log("You are eligible to vote!");
+              } else {
+                console.log("You can't vote yet!");
+              }
             </code></pre>
         </section>
         <section>
@@ -327,7 +328,7 @@
               <li>If it's less than 0 degrees, stay inside.</li>
               <li>Otherwise, wear whatever you want.</li>
             </ul>
-            <p>BONUS: Add code to wear a waterproof coat and/or boots if it is raining or snowing! How would you code this complexity?</p>
+            <p><span class="bold brand-salmon">BONUS:</span> Add code to wear a waterproof coat and/or boots if it is raining or snowing! How would you code this complexity?</p>
         </section>
       </div>
       <footer class="footer">
