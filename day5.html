@@ -69,9 +69,9 @@
             window.document
           </code></pre>
           <aside class="notes">
-            <p>The DOM is a model of the Document Object. A document is loaded to the window, and is accessible as a property on <span>window</span>, or by the shorthand <span class="monospace">document.</span></p>
-            <p>Demo <span>window.document</span> in the Chrome console. Students can do the same.</p>
-            <p>You could also show <span class="monospace">window.location</span>, <span class="monospace">window.alert</span>, and <span class="monospace">window.open</span>.</p>
+            <p>The DOM is a model of the Document Object. A document is loaded to the window, and is accessible as a property on `window`, or just by the shorthand `document`.</p>
+            <p>Demo window.document in the Chrome console. Encourage students to try it for themselves as well.</p>
+            <p>You could also show `window.location`, `window.alert`, and `window.open`.</p>
           </aside>
         </section>
         <section>
@@ -96,7 +96,7 @@
           </div>
           <aside class="notes">
             <p>Walk through the syntax of the different ways to select DOM elements, tying back to some of the things students may have said. (This slide has fragmented content that is revealed as you tab through it.)</p>
-            <p>Make note of the difference between "getElement" and "getElements" -- this is a common gotcha for new students. To select a single node when an array (technically an <span class="monospace"> HTMLCollection</span>) is returned, remind students about bracket notation.</p>
+            <p>Make note of the difference between "getElement" and "getElements" -- this is a common gotcha for new students. To select a single node when an array (technically an `HTMLCollection`) is returned, remind students about bracket notation.</p>
           </aside>
         </section>
         <section>
@@ -135,7 +135,7 @@
             </code></pre>
             <aside class="notes">
               <p>Demo this in the console. Note that there is very often more than one way to do things in JS (or any language).</p>
-              <p>When you demo this in the console you could choose to add in the <span class="monospace">querySelector</span> and <span class="monospace">querySelectorAll</span> methods to select elements using CSS selectors.</p>
+              <p>When you demo this in the console you could choose to add in the `querySelector` and `querySelectorAll' methods to select elements using CSS selectors.</p>
             </aside>
         </section>
         <section>
@@ -193,7 +193,7 @@
           <p>Go to <a href="www.reuters.com">reuters.com</a> or another news site. Using JavaScript only, find and change a headline to something you like better!</p>
         </section>
         <section>
-          <h2>Javascript Events</h2>
+          <h2>JavaScript Events</h2>
           <p>User interactions create events on the page. JavaScript can handle these events: detect when something happens and do something in response, including changing the DOM or triggering other events. </p>
           <aside class="notes">
             <p>Ask students to brainstorm what some events might be and some interactions they are familiar with on webpages.</p>
@@ -203,11 +203,11 @@
         <section>
           <h2>Some Types of Events</h2>
           <ul class="no-bullet">
-            <li><i class="fas fa-spinner fa-fw"></i> when the page loads</li>
-            <li><i class="fas fa-mouse-pointer fa-fw"></i> a mouse click or movement</li>
-            <li><i class="fas fa-hand-point-up fa-fw"></i> a tap on a touchscreen</li>
-            <li><i class="fas fa-keyboard fa-fw"></i> when a key is pressed</li>
-            <li><i class="fas fa-check-square fa-fw"></i> when something is selected</li>
+            <li><i class="fas fa-spinner fa-fw bold brand-salmon"></i> when the page loads</li>
+            <li><i class="fas fa-mouse-pointer fa-fw bold brand-salmon"></i> a mouse click or movement</li>
+            <li><i class="fas fa-hand-point-up fa-fw bold brand-salmon"></i> a tap on a touchscreen</li>
+            <li><i class="fas fa-keyboard fa-fw bold brand-salmon"></i> when a key is pressed</li>
+            <li><i class="fas fa-check-square fa-fw bold brand-salmon"></i> when something is selected</li>
           </ul>
         </section>
         <aside class="notes">An event fires and triggers some JavaScript code to run. The code has been written to "listen" for when a certain event occurs; when that event occurs, the code will run.</aside>
@@ -258,8 +258,11 @@
         </section>
         <section>
           <h2>HOMEWORK</h2>
-          <p>Go back to the in-class coding exercises you did to make changes to the DOM. Add event handlers so that those changes are made in response to an event.</p>
-          <p>Use the <a href="https://developer.mozilla.org/en-US/docs/Web/Events">MDN event reference</a> to see other browser events you could try.</p>
+          <ol>
+            <li>Go back to the in-class coding exercises you did to make changes to the DOM. Add event handlers so that those changes are made in response to an event.</li>
+            <li>Add a JavaScript event to the page you built for homework on day one or two.</li>
+            <li>Use the <a href="https://developer.mozilla.org/en-US/docs/Web/Events">MDN event reference</a> to see other browser events you could try.</li>
+          </ol>
         </section>
       </div>
       <footer class="footer">
