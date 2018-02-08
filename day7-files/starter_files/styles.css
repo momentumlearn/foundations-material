@@ -1,0 +1,75 @@
+/* NOTE: The styles in here are just to get you started! */
+/* You will need to add to existing classes here and define new ones. */
+
+body {
+  margin: 0;
+  font-family: 'Helvetica', Arial, Sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+footer {
+  height: 370px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+footer .animation {
+  width: 47%;
+  display: inline-block;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+
+}
+
+
+.doughnut {
+  height: 300px;
+  width: 300px;
+  background: url('images/footer-doughnut.png') no-repeat;
+  display: inline-block;
+  position: relative;
+}
+
+.btn {
+  width: 170px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 4px;
+  line-height: 50px;
+  font-size: 18px;
+  background: #CF6480;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: #90172A;
+}
+
+.sprinkles {
+  display: inline-block;
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('images/sprinkles.png') no-repeat;
+}

@@ -20,7 +20,9 @@ Time is limited, so students should not use class time trying to decide what to 
 
 
 * Build a webpage for a donut shop!
-  * _note to instructors:_ in the `day7-files` directory included in this repo, you'll find a completed site for your reference, a PDF of the completed page, a GIF demonstrating JS functionality that they can build into the site, and starter files with the project structure and assets.
+  * _note to instructors:_ in the `day7-files` directory included in this repo you'll find a PDF of the completed page and a GIF demonstrating JS functionality that they can build into the site. Please share these with the students. The completed project and starter files are included here but also live on Glitch:
+    * [Starter files with the project structure and assets on Glitch](https://donut-shop-starter-files.glitch.me)
+    * [Completed project for your reference on Glitch](https://glitch.com/edit/#!/donut-shop)
 * Return to something you built for homework during this course and work on it more during class. Ask questions and get help here! If you choose this option, you can choose to both work on the same project or each work on your own project, sharing what you've done and helping each other out.
 * Build a simple reference page about CSS. Choose one or more properties to demonstrate, and use JavaScript to illustrate what different properties do using user input for the property values. For instance, you could have information about the "background color" property with color values in a [select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select), so that when a user selects a color, the background color for some node in the DOM is changed. The page itself should have a nice layout and styling.
 * HARD MODE Build a very simple JavaScript clock using the [Date object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date). It should look like a standard digital clock, showing the hour, minutes, and seconds. Bonus: change the background color at a certain interval.

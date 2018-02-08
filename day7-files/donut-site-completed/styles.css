@@ -7,8 +7,6 @@ body {
   font-family: 'Helvetica', Arial, Sans-serif;
   line-height: 1.5;
   color: #90172a;
-  background: ;
-
 }
 
 .container {
@@ -148,9 +146,8 @@ footer li {
   background: #90172A;
 }
 
-
 .sprinkles {
-  display: none;
+  display: inline-block;
   position: absolute;
   height: 350px;
   width: 350px;
@@ -160,16 +157,3 @@ footer li {
   left: 0;
   background: url('../images/sprinkles.png') no-repeat;
 }
-
-.show {
-  display: inline-block;
-}
-
-
-
-
-
-
-
-
-
