@@ -136,13 +136,23 @@
             <p>Note that the argument to this method is the _entire_ selector, just like it is used in CSS (you could also use #, tag names, and more complex selectors, but the students won't have seen those at this point).</p>
           </aside>
         </section>
-        <aside class="notes">
-          <p>Demo these examples in the console, perhaps showing how you might handle the list of node returned by the `querySelectorAll` method.</p>
-          <p>Note that the argument to this method is the _entire_ selector, just like it is used in CSS (you could also use #, tag names, and more complex selectors, but the students won't have seen those at this point).</p>
-        </aside>
         <section>
           <h2>Changing Things in the DOM</h2>
-          <p>Now that we know how to find DOM elements, we can make changes to them.</p>
+          <p>Once we can select DOM elements, we can make changes to them.</p>
+          <p>We can use JavaScript for...</p>
+          <ul>
+            <li>Adding or removing element attributes</li>
+            <li>Adding or removing classes</li>
+            <li>Adding or removing entire elements and/or their content</li>
+          </ul>
+          <p>Let's look at how to do this!</p>
+          <aside class="notes">
+            <p>Ask students to think about why we might want to do this. This is a building block for creating more complex behaviors.</p>
+          </aside>
+        </section>
+        <section>
+          <h2>Updating Element Attributes in the DOM</h2>
+          <p></p>
             <pre><code data-trim>
               var mainImg = document.getElementById('main-image');
               mainImg.src
@@ -152,10 +162,19 @@
               mainImg.style.border = '4px solid purple';
                 // sets the style attribute and border property to this value
             </code></pre>
-            <aside class="notes">
-              <p>Demo this in the console. Note that there is very often more than one way to do things in JS (or any language).</p>
-              <p>When you demo this in the console you could choose to add in the `querySelector` and `querySelectorAll' methods to select elements using CSS selectors.</p>
-            </aside>
+        </section>
+        <section>
+          <h2>Changing Classes in the DOM</h2>
+          <p>Making changes to classes lets us apply styles to, or remove styles from, elements in the DOM.</p>
+          <pre><code data-trim>
+            el = document.querySelector('.input--name');
+            elementClasses = el.classList
+            elementClasses.add('.highlight');
+          </code></pre>
+          <aside class="notes">
+            <p>Demo and walk through this code.</p>
+            <p>You could choose to illustrate the difference between element.className (which gets/sets) and element.classList (which returns a DOMTokenList and has methods you can call to add/remove/toggle classes).</p>
+          </aside>
         </section>
         <section>
           <h2>CODE BREAK</h2>
