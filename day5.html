@@ -122,6 +122,25 @@
           </aside>
         </section>
         <section>
+          <h2>querySelector and querySelectorAll</h2>
+          <p>Another way to select elements in the DOM uses CSS selectors.</p>
+          <pre><code data-trim>
+            // This will return the first element matching the provided selector
+            document.querySelector(".profile-photo");
+
+            // This returns a collection of elements matching the selector
+            document.querySelectorAll(".profile-photo");
+          </code></pre>
+          <aside class="notes">
+            <p>Demo these examples in the console, perhaps showing how you might handle the list of node returned by the `querySelectorAll` method.</p>
+            <p>Note that the argument to this method is the _entire_ selector, just like it is used in CSS (you could also use #, tag names, and more complex selectors, but the students won't have seen those at this point).</p>
+          </aside>
+        </section>
+        <aside class="notes">
+          <p>Demo these examples in the console, perhaps showing how you might handle the list of node returned by the `querySelectorAll` method.</p>
+          <p>Note that the argument to this method is the _entire_ selector, just like it is used in CSS (you could also use #, tag names, and more complex selectors, but the students won't have seen those at this point).</p>
+        </aside>
+        <section>
           <h2>Changing Things in the DOM</h2>
           <p>Now that we know how to find DOM elements, we can make changes to them.</p>
             <pre><code data-trim>
