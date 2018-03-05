@@ -31,7 +31,8 @@
 				<section>
 					<h2>Today we'll learn about...</h2>
 						<ul>
-							<li>using the <a href="https://www.google.com/chrome/browser/desktop/index.html">Chrome browser</a> for development</li>
+                            <li>using the <a href="https://www.google.com/chrome/browser/desktop/index.html">Chrome browser</a> and <a href="https://glitch.com/">Glitch</a>
+                                for development</li>
 							<li>creating your first webpage!</li>
 							<li>how to create content with HTML</li>
 							<li>using CSS to style your content with fonts, colors, and other decorations</li>
@@ -56,7 +57,7 @@
 									<li>items in a list</li>
 								</ul>
 							<p>and more. HTML is also used to indicate what elements of a web page are logically enclosed in other elements. For example, a button that says "Submit Feedback" might belong inside a form, which is inside the same section as the heading, "Website Feedback".</p>
-							<p>Look at Momentum's website (www.momentumlearn.com) to show source</p>
+							<p>Look at Girl Develop It's website (https://www.girldevelopit.com) to show source</p>
 						</aside>
 				</section>
 				<section>
@@ -79,10 +80,6 @@ body {
 						<p>HTML by itself has very little styling (has some -- give examples). CSS gives us a language to express and describe the visual presentation of our content in a way the browser can interpret and display.<p>
 					</aside>
 				</section>
-				<section data-background-image="images/css-diagram.jpg">
-					<aside class="notes">
-						<p>Cascading Style Sheets. The pattern lets us describe styles for general elements that apply to all its subsets (or children elements). We can have one stylesheet and apply it to many different pages -- or, alternately, have certain styles that only apply to certain pages.</p></aside>
-				</section>
 
 <!-- INTRO TO HTML -->
 				<section>
@@ -103,7 +100,7 @@ body {
 				<section data-background-image="images/html-elements.jpg">
 					<aside class="notes">
 						<p>HTML elements are the building blocks of a website's structure.</p>
-						<p>[Show Momentum website and point out elements visually. What kind of things do you see here? Break it down into small parts.] Look at a website: we need some way to tell the browser, in code, to make these things appear on the page. HTML is the language we use to tell the browser to do that.</p>
+						<p>[Show Girl Develop It website and point out elements visually. What kind of things do you see here? Break it down into small parts.] Look at a website: we need some way to tell the browser, in code, to make these things appear on the page. HTML is the language we use to tell the browser to do that.</p>
 						<p>HTML content is written using "tags".</p>
 						<p>Tags show the beginning and ending of an HTML element. [Use slide illustration to break down the structure of an element: tag opening/closing; attribute/value; content.]</p>
 						<p>[Write some examples on whiteboard, showing the structure/syntax of a tag]</p>
@@ -253,20 +250,44 @@ body {
 						<p>Go through it slowly and repeat several times.</p>
 					<p>Demo several different properties applied to different elements: background-color, font-size, color, text-decoration, height, width</p>
 				</aside>
-			</section>
+            </section>
+            <section data-markdown>
+                <textarea data-template>
+                        ## CSS selectors
+
+                        We can apply styles to a particular part of our HTML document using _selectors_.
+                        
+                        * `h1` - selects all `h1` elements
+                        * `h1, h2` - selects all `h1` and `h2` elements
+                        * `.selfie` - selects all elements with the class "selfie"
+                        * `.sidebar a` - selects all `a` elements nested inside elements with the class "sidebar"
+                </textarea>
+            </section>
 			<section>
 				<h3>Useful CSS Properties</h3>
 				<ul>
-					<li>color</li>
-					<li>background-color</li>
-					<li>background-image</li>
-					<li>font-size</li>
-					<li>text-decoration</li>
-					<li>height</li>
-					<li>width</li>
+					<li>color: the color of the text, by name or hex code</li>
+					<li>background-color: the color of the background, by name or hex code</li>
+					<li>background-image: an image to use for the background</li>
+					<li>font-size: the size of the text, in pixels (px) or em-units</li>
+                    <li>text-decoration: none, underline, overline, line-through, blink</li>
+                    <li>text-align: left, right, center, justify</li>
+					<li>height: the height of an element in px, %, or em-units</li>
+                    <li>width: the width of an element in px, %, or em-units</li>
 				</ul>
 				<aside class="notes">Demo writing styles with these properties in glitch.</aside>
-			</section>
+            </section>
+            <section data-markdown>
+                <textarea data-template>
+                        ## Colors
+
+                        There is a giant list of color names you can use, but people generally use a _hex code_. A hex code is a set of three numbers between 0 and 255 in hexadecimal (base-16) format, beginning with a pound sign, like: `#FF00A7`.
+                        
+                        The first number is the amount of red, the second the amount of green, and the third the amount of blue. `#000000` is black and `#FFFFFF` is white.
+                        
+                        See [HTML Color Codes](http://htmlcolorcodes.com/).
+                </textarea>
+            </section>
 			<section>
 				<h3>CODE BREAK</h3>
 				<p>Create an external stylesheet called "main.css" and link it to your html page. Write some styles for your page's content, giving some thought to the type of selectors you want to use. Reload the page to make sure your styles are applied.</p>
@@ -289,6 +310,7 @@ body {
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+                history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
