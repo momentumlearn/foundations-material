@@ -42,7 +42,7 @@
 				</section>
 <!--  OVERVIEW OF TODAY'S TOPICS  -->
 				<section>
-					<h3>Overview: What is HTML?<h3>
+					<h3>Overview: What is HTML?</h3>
 						<img src="images/html-example.png">
 						<aside class="notes">
 							<p>HTML acts as the skeleton of a web page, providing its underlying structure. You can use HTML to specify parts of your page like:</p>
@@ -77,7 +77,7 @@ body {
 }
 						</code></pre>
 					<aside class="notes">
-						<p>HTML by itself has very little styling (has some -- give examples). CSS gives us a language to express and describe the visual presentation of our content in a way the browser can interpret and display.<p>
+						<p>HTML by itself has very little styling (has some -- give examples). CSS gives us a language to express and describe the visual presentation of our content in a way the browser can interpret and display.</p>
 					</aside>
 				</section>
 
@@ -87,7 +87,8 @@ body {
 				</section>
 				<section data-background-image="images/html-doctype.jpg">
 					<aside class="notes">
-						<p>An HTML document needs a few basic things to work:</p>
+                        <p>An HTML document needs a few basic things to work:</p>
+                        <ul>
 						<li> a self-closing DOCTYPE tag</li>
 						<li> html tags</li>
 						<li> head tags</li>
@@ -108,7 +109,7 @@ body {
 				</section>
 				<section>
 					<h3>Let's build a page!</h3>
-					<iframe src="https://giphy.com/embed/ChpOyeacGmpQk" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dog-computer-ChpOyeacGmpQk">via GIPHY</a></p>
+					<iframe src="https://giphy.com/embed/ChpOyeacGmpQk" width="480" height="270" frameborder="0" class="giphy-embed" allowfullscreen></iframe><p><a href="https://giphy.com/gifs/dog-computer-ChpOyeacGmpQk">via GIPHY</a></p>
 					<aside class="notes">
 						<p>Demo putting together a very simple page in the text editor and loading it in the browser. Ask for help from the audience for the markup. What do we need to include?</p>
 					</aside>
@@ -119,7 +120,7 @@ body {
 					<aside class="notes">This should take about 10 minutes</aside>
 				</section>
 				<section>
-					<h2>Let's look at some examples of elements<h3>
+					<h2>Let's look at some examples of elements</h2>
 				</section>
 				<section>
 					<h3>Heading Element</h3>
@@ -152,7 +153,7 @@ body {
 								&lt;/p&gt;
 						</code></pre>
 						<aside class="notes">
-							<p>Demo in editor and browser. You can also mention placeholder text here (this is http://durhamipsum.com/).</a></p>
+							<p>Demo in editor and browser. You can also mention placeholder text here (this is http://durhamipsum.com/).</p>
 						</aside>
 				</section>
 				<section>
@@ -160,7 +161,18 @@ body {
 					<pre><code class="html" data-trim>
             <a href="http://www.momentumlearn.com">Momentum Learning</a>
            </code></pre>
-				</section>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                            ## Tag attributes
+
+                            All tags can have tag attributes. A tag attribute has the attribute name on the left side, an equals sign, and a value in quotation marks on the right.
+
+                            * `href` is used in links. It stands for "hypertext reference."
+                            * `class` can be used on all tags and helps with styling.
+                            * `id` can be used on all tags and should be unique within the document.
+                    </textarea>
+                </section>
 				<section>
 					<h3>List Element</h3>
 					<pre><code class="html" data-trim>
@@ -217,7 +229,7 @@ body {
 			</section>
 			<section data-background-image="images/css-rules.jpg">
 				<aside class="notes">
-					<p>CSS is written in a stylesheet as a series of rules. Rules are selectors plus properties.
+					<p>CSS is written in a stylesheet as a series of rules. Rules are selectors plus properties.</p>
 					<p>Let's look at the syntax of a css rule.</p>
 				</aside>
 			</section>
@@ -256,7 +268,7 @@ body {
                         ## CSS selectors
 
                         We can apply styles to a particular part of our HTML document using _selectors_.
-                        
+
                         * `h1` - selects all `h1` elements
                         * `h1, h2` - selects all `h1` and `h2` elements
                         * `.selfie` - selects all elements with the class "selfie"
@@ -282,9 +294,9 @@ body {
                         ## Colors
 
                         There is a giant list of color names you can use, but people generally use a _hex code_. A hex code is a set of three numbers between 0 and 255 in hexadecimal (base-16) format, beginning with a pound sign, like: `#FF00A7`.
-                        
+
                         The first number is the amount of red, the second the amount of green, and the third the amount of blue. `#000000` is black and `#FFFFFF` is white.
-                        
+
                         See [HTML Color Codes](http://htmlcolorcodes.com/).
                 </textarea>
             </section>
