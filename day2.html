@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>CSS for Layout</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/momentum.css">
@@ -14,146 +15,248 @@
 
     <!-- Printing and PDF exports -->
     <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="reveal">
-      <div class="slides">
-        <section>
-          <h1>Foundations</h1>
-          <h2 class="brand-teal">CSS for Layout</h2>
-          <aside class="notes">
-            <p>Review the homework from last night!</p>
-          </aside>
-        </section>
-        <section>
-          <h2>Today we'll learn about...</h2>
-            <ul>
-              <li>the box model in CSS</li>
-              <li>applying borders and margins to HTML elements</li>
-              <li>how to position elements on your page</li>
-              <li>HTML block and inline elements</li>
-            </ul>
-        </section>
-        <section>
-          <h3>What is page layout?</h3>
-          <img src="images/wikipedia-wireframe.png" id="wireframe">
-          <label for="wireframe" class="image-attribution">source: <a rel="nofollow" href="http://www.flickr.com/people/doos/">http://www.flickr.com/people/doos/</a> - <a rel="nofollow" href="http://www.flickr.com/photos/doos/3931846833/">http://www.flickr.com/photos/doos/3931846833/</a>, <a href="http://creativecommons.org/licenses/by/2.0" title="Creative Commons Attribution 2.0">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=12888965">Link</a></label>
-          <aside class="notes">
-            <p>Layout is the arrangement of HTML elements on the page, in relation to each other and to the dimensions of the browser window. Discuss the wireframe image by asking students to figure out what elements go into creating a layout like this.</p>
-          </aside>
-        </section>
-        <section>
-          <h3>BOXES!</h3>
-          <iframe src="https://giphy.com/embed/WfszxUKboL1Ze" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/WfszxUKboL1Ze">via GIPHY</a></p>
-          <aside class="notes">
-            <p>Positioning things in CSS means learning to think about your content in boxes.</p>
-          </aside>
-        </section>
-        <section>
-          <h3>Containers</h3>
-          <p>You can group elements together using a div as a container.</p>
-          <p>Styles that you apply to the <span class="code-snippet">div</span> apply to all its child elements.</p>
-          <!-- Embed Code -->
-          <div class="glitch-embed-wrap" style="height: 402px; width: 100%; border: 1px solid #C3C3C3; border-radius: 5px; box-shadow: 4px 4px #C3C3C3; background-color: white; overflow: hidden;">
-            <iframe src="https://glitch.com/embed/#!/embed/css-layout-practice?path=styles.css&previewHeight=157" style="height: 100%; width: 100%; border: 0;" alt="code example in glitch"></iframe>
-          </div>
-          <aside class="notes">
-            <p>Use the embedded Glitch project to demo how to apply styles to a group of elements using container divs. Edit as you like!</p>
-          </aside>
-        </section>
-        <section>
-          <h3>The Box Model</h3>
-          <img src="images/box-model-mdn.png" id="box-model-mdn" style="height: 500px">
-          <label for="box-model-mdn" class="image-attribution"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">&quot;The Box Model&quot;</a> by <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC-BY-SA 2.5</a></label>
-          <aside class="notes">
-            <p>Every HTML element is rendered in the browser as a box with a certain width and height. Each element's box is made up of a series of smaller nested boxes.</p>
-            <p>You can show the box model in the Chrome Inspector.</p>
-            <p>The **content box** is where text, images, and other elements will appear. This is the innermost box and can be sized using the `width` and `height` properties.</p>
-            <p>The **padding box** is the blank space between the content box and the border box, and can give individual elements breathing room next to the rest of the content on the page. Padding can be adjusted using the `padding` properties.</p>
-            <p>The **border box** is the region that marks the visual edge of the content box. The `background-color` property of the content box, for example, will not extend beyond the border. The border's width, color, and style can be adjusted all at once using the single `border` shorthand property, or individually using `border-width`, `border-style`, and `border-color`.</p>
-            <p>The **margin box** is the blank space between the border box of the element and the next HTML element. Margins are similar to padding but are positioned outside of the visual area of the element. Margins can be styled using the `margin` properties.</p>
-            <p>Demo applying styles with padding, margin, border, with careful attention to how the values work.</p>
-          </aside>
-        </section>
-        <section data-background-image="images/css-block-vs-inline.png">
-          <aside class="notes">
-            <h6>Block vs. Inline content.</h6>
-            <p>HTML elements have natural behavior in the page ("normal flow.")</p>
-            <p>Block elements occupy the entire horizontal space, such as a section of a page or container.</p>
-            <p>Inline elements occupy a part of the horizontal space equal to the width needed to fit the inner content, such as a string of text, a link, or an image</p>
-            <p>You can change the natural behavior of an element by setting the display property.</p>
-          </aside>
-        </section>
-        <section>
-          <h3>CODE BREAK</h3>
-          <p>Apply styles to your page. Focus on border, margin, padding. Notice if your elements are <span class="code-snippet">display: block</span> or <span class="code-snippet">display: inline</span>. Experiment to see what happens when you set or change style properties.</p>
-          <p>Reference: <a href="https://css-tricks.com/almanac/properties/">CSS-Tricks properties list</a></p>
-        </section>
-        <section>
-          <h3>CSS Layout: Floats</h3>
-          <p data-height="265" data-theme-id="0" data-slug-hash="qVwVjX" data-default-tab="html,result" data-user="amygori" data-embed-version="2" data-pen-title="Playable code" class="codepen">See the Pen <a href="https://codepen.io/amygori/pen/qVwVjX/">Playable code</a> by Amy Gori (<a href="https://codepen.io/amygori">@amygori</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-          <aside class="notes">
-            <p>Demo applying float right, left, and none to the image in the Codepen. Both the img and the p are block elements,  but applying float takes the element out of the normal flow.</p>
-          </aside>
-        </section>
-        <section>
-          <h3>CSS Floats: Behavior</h3>
-          <p data-height="265" data-theme-id="0" data-slug-hash="BmEmGg" data-default-tab="html,result" data-user="amygori" data-embed-version="2" data-pen-title="CSS Floats 101" class="codepen">See the Pen <a href="https://codepen.io/amygori/pen/BmEmGg/">CSS Floats 101</a> by Amy Gori (<a href="https://codepen.io/amygori">@amygori</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-        </section>
-        <section>
-          <h3>CSS Floats: Practical Layout Example</h3>
-          <p data-height="265" data-theme-id="0" data-slug-hash="GOLwjG" data-default-tab="html,result" data-user="amygori" data-embed-version="2" data-pen-title="2-column layout with floats" class="codepen">See the Pen <a href="https://codepen.io/amygori/pen/GOLwjG/">2-column layout with floats</a> by Amy Gori (<a href="https://codepen.io/amygori">@amygori</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-        </section>
-        <section>
-          <h3>Centering Elements</h3>
-          <p>To center an element on a page, or inside its containing element, you can set its <span class="code-snippet">left-margin</span> and <span class="code-snippet">right-margin</span> to <span class="code-snippet">auto</span>.</p>
-          <pre><code data-trim>
-            div.centered {
+        <div class="slides">
+            <section>
+                <h1>Foundations</h1>
+                <h2 class="brand-teal">CSS for Layout</h2>
+                <aside class="notes">
+                    <p>Review the homework from last night!</p>
+                </aside>
+            </section>
+            <section>
+                <h2>Today we'll learn about...</h2>
+                <ul>
+                    <li>the box model in CSS</li>
+                    <li>applying borders and margins to HTML elements</li>
+                    <li>HTML block and inline elements</li>
+                    <li>how to position elements on your page</li>
+                </ul>
+            </section>
+            <section>
+                <h3>What is page layout?</h3>
+                <img src="images/wikipedia-wireframe.png" id="wireframe">
+                <label for="wireframe" class="image-attribution">source:
+                    <a rel="nofollow" href="http://www.flickr.com/people/doos/">http://www.flickr.com/people/doos/</a> -
+                    <a rel="nofollow" href="http://www.flickr.com/photos/doos/3931846833/">http://www.flickr.com/photos/doos/3931846833/</a>,
+                    <a href="http://creativecommons.org/licenses/by/2.0" title="Creative Commons Attribution 2.0">CC BY 2.0</a>,
+                    <a href="https://commons.wikimedia.org/w/index.php?curid=12888965">Link</a>
+                </label>
+                <aside class="notes">
+                    <p>Layout is the arrangement of HTML elements on the page, in relation to each other and to the dimensions
+                        of the browser window. Discuss the wireframe image by asking students to figure out what elements
+                        go into creating a layout like this.</p>
+                </aside>
+            </section>
+            <section>
+                <h3>BOXES!</h3>
+                <iframe src="https://giphy.com/embed/WfszxUKboL1Ze" width="480" height="360" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+                <p>
+                    <a href="https://giphy.com/gifs/WfszxUKboL1Ze">via GIPHY</a>
+                </p>
+                <aside class="notes">
+                    <p>Positioning things in CSS means learning to think about your content in boxes.</p>
+                </aside>
+            </section>
+            <section>
+                <h3>Containers</h3>
+                <p>You can group elements together using a div as a container.</p>
+                <p>Styles that you apply to the
+                    <span class="code-snippet">div</span> apply to all its child elements.</p>
+                <!-- Embed Code -->
+                <div class="glitch-embed-wrap" style="height: 402px; width: 100%; border: 1px solid #C3C3C3; border-radius: 5px; box-shadow: 4px 4px #C3C3C3; background-color: white; overflow: hidden;">
+                    <iframe src="https://glitch.com/embed/#!/embed/css-layout-practice?path=styles.css&previewHeight=157" style="height: 100%; width: 100%; border: 0;"
+                        alt="code example in glitch"></iframe>
+                </div>
+                <aside class="notes">
+                    <p>Use the embedded Glitch project (https://glitch.com/edit/#!/css-layout-practice?path=styles.css:1:0)
+                        to demo how to apply styles to a group of elements using container divs. Edit as you like!</p>
+                </aside>
+            </section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Content grouping tags Other tags can create blocks as well. ```html
+                    <section>
+                        Useful for different sections of your document, like an introduction or the main content. Usually has a heading.
+                    </section>
+                    <article>
+                        There are some more specific tags. Besides article, there is also header, footer, aside, and nav.
+                    </article>
+                    <div>
+                        A generic grouping tag. Used often to style content.
+                    </div>
+                    ```
+                </textarea>
+            </section>
+            <section>
+                <h3>The Box Model</h3>
+                <img src="images/box-model-mdn.png" id="box-model-mdn" style="height: 500px">
+                <label for="box-model-mdn" class="image-attribution">
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">&quot;The Box Model&quot;</a> by
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model$history">Mozilla Contributors</a> is licensed under
+                    <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC-BY-SA 2.5</a>
+                </label>
+                <aside class="notes">
+                    <p>Every HTML element is rendered in the browser as a box with a certain width and height. Each element's
+                        box is made up of a series of smaller nested boxes.</p>
+                    <p>You can show the box model in the Chrome Inspector.</p>
+                    <p>The **content box** is where text, images, and other elements will appear. This is the innermost box
+                        and can be sized using the `width` and `height` properties.</p>
+                    <p>The **padding box** is the blank space between the content box and the border box, and can give individual
+                        elements breathing room next to the rest of the content on the page. Padding can be adjusted using
+                        the `padding` properties.</p>
+                    <p>The **border box** is the region that marks the visual edge of the content box. The `background-color`
+                        property of the content box, for example, will not extend beyond the border. The border's width,
+                        color, and style can be adjusted all at once using the single `border` shorthand property, or individually
+                        using `border-width`, `border-style`, and `border-color`.</p>
+                    <p>The **margin box** is the blank space between the border box of the element and the next HTML element.
+                        Margins are similar to padding but are positioned outside of the visual area of the element. Margins
+                        can be styled using the `margin` properties.</p>
+                    <p>Demo applying styles with padding, margin, border, with careful attention to how the values work.</p>
+                </aside>
+            </section>
+            <section data-background-image="images/css-block-vs-inline.png">
+                <aside class="notes">
+                    <h6>Block vs. Inline content.</h6>
+                    <p>HTML elements have natural behavior in the page ("normal flow.")</p>
+                    <p>Block elements occupy the entire horizontal space, such as a section of a page or container.</p>
+                    <p>Inline elements occupy a part of the horizontal space equal to the width needed to fit the inner content,
+                        such as a string of text, a link, or an image</p>
+                    <p>You can change the natural behavior of an element by setting the display property.</p>
+                </aside>
+            </section>
+            <section>
+                <h3>Chrome Developer Tools</h3>
+                <p>
+                    You can investigate the layout of a page using Chrome Developer Tools.
+                </p>
+                <img src="images/chrome_dev_tools.png" alt="Chrome Developer Tools">
+                <aside class="notes">
+                    <p>Open up Chrome Developer Tools and show how to select an element, see styles, see computed styles, and
+                        live-edit styles.
+                    </p>
+                </aside>
+            </section>
+            <section>
+                <h3>CODE BREAK</h3>
+                <p>Apply styles to your page. Focus on border, margin, padding. Notice if your elements are
+                    <span class="code-snippet">display: block</span> or
+                    <span class="code-snippet">display: inline</span>. Experiment to see what happens when you set or change style properties.</p>
+                <p>Reference:
+                    <a href="https://css-tricks.com/almanac/properties/">CSS-Tricks properties list</a>
+                </p>
+            </section>
+            <section>
+                <h3>CSS Layout: Floats</h3>
+                <p data-height="265" data-theme-id="0" data-slug-hash="qVwVjX" data-default-tab="html,result" data-user="amygori" data-embed-version="2"
+                    data-pen-title="Playable code" class="codepen">See the Pen
+                    <a href="https://codepen.io/amygori/pen/qVwVjX/">Playable code</a> by Amy Gori (
+                    <a href="https://codepen.io/amygori">@amygori</a>) on
+                    <a href="https://codepen.io">CodePen</a>.</p>
+                <aside class="notes">
+                    <p>Demo applying float right, left, and none to the image in the Codepen. Both the img and the p are block
+                        elements, but applying float takes the element out of the normal flow.</p>
+                </aside>
+            </section>
+            <section>
+                <h3>CSS Floats: Behavior</h3>
+                <p data-height="265" data-theme-id="0" data-slug-hash="BmEmGg" data-default-tab="html,result" data-user="amygori" data-embed-version="2"
+                    data-pen-title="CSS Floats 101" class="codepen">See the Pen
+                    <a href="https://codepen.io/amygori/pen/BmEmGg/">CSS Floats 101</a> by Amy Gori (
+                    <a href="https://codepen.io/amygori">@amygori</a>) on
+                    <a href="https://codepen.io">CodePen</a>.</p>
+            </section>
+            <section>
+                <h3>CSS Floats: Practical Layout Example</h3>
+                <p data-height="265" data-theme-id="0" data-slug-hash="GOLwjG" data-default-tab="html,result" data-user="amygori" data-embed-version="2"
+                    data-pen-title="2-column layout with floats" class="codepen">See the Pen
+                    <a href="https://codepen.io/amygori/pen/GOLwjG/">2-column layout with floats</a> by Amy Gori (
+                    <a href="https://codepen.io/amygori">@amygori</a>) on
+                    <a href="https://codepen.io">CodePen</a>.</p>
+            </section>
+            <section>
+                <h3>Centering Elements</h3>
+                <p>To center an element on a page, or inside its containing element, you can set its
+                    <span class="code-snippet">left-margin</span> and
+                    <span class="code-snippet">right-margin</span> to
+                    <span class="code-snippet">auto</span>.</p>
+                <pre><code data-trim>
+            .centered {
               margin: 0 auto;
             }
           </code></pre>
-          <aside class="notes">
-            <p>Demo this in the browser. Review how the values work for the margin property. Pay special attention to the idea of a "containing element".</p>
-          </aside>
-        </section>
-        <section>
-          <h3>CODE BREAK</h3>
-          <p>Arrange your HTML page's layout using height, width, margins, and floats. </p>
-        </section>
-        <section>
-          <h3>HOMEWORK</h3>
-          Create a page with a layout that looks like this:
-          <img src="images/wireframe.png" style="height: 400px; border: none">
-        </section>
-        <aside class="notes">
-          <p>The point of this exercise is practice with arranging page elements in an expected design. Review resources that they can use to help them: MDN, CSS-Tricks, and anything other resources you like. They can use their homework from last night and improve upon it, or they can start a new project. Encourage students to use semantic HTML and fill in the blocks with content that makes sense. This is intentionally open-ended and may be really challenging for that reason! If there is time left in class, ask students to start working on this so that they can ask questions while they work.</p>
-        </aside>
-      </div>
-      <footer class="footer">
-        <img src="images/logo-main.png" alt="">
-      </footer>
+                <aside class="notes">
+                    <p>Demo this in the browser. Review how the values work for the margin property. Pay special attention to
+                        the idea of a "containing element".</p>
+                </aside>
+            </section>
+            <section>
+                <h3>CODE BREAK</h3>
+                <p>Arrange your HTML page's layout using height, width, margins, and floats. </p>
+            </section>
+            <section>
+                <h3>HOMEWORK</h3>
+                Create a page with a layout that looks like this:
+                <img src="images/wireframe.png" style="height: 400px; border: none">
+                <p>
+                    You can move the sidebar to the left if you like. Try editing your personal page to have your name in the top box, links
+                    to your social media accounts in the sidebar, content in the main area, and a copyright notice in the
+                    footer. Of course, you can put whatever you like on your page!
+                </p>
+            </section>
+            <aside class="notes">
+                <p>The point of this exercise is practice with arranging page elements in an expected design. Review resources
+                    that they can use to help them: MDN, CSS-Tricks, and anything other resources you like. They can use
+                    their homework from last night and improve upon it, or they can start a new project. Encourage students
+                    to use semantic HTML and fill in the blocks with content that makes sense. This is intentionally open-ended
+                    and may be really challenging for that reason! If there is time left in class, ask students to start
+                    working on this so that they can ask questions while they work.</p>
+            </aside>
+        </div>
+        <footer class="footer">
+            <img src="images/logo-main.png" alt="">
+        </footer>
     </div>
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
     <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({
-        dependencies: [
-          { src: 'plugin/markdown/marked.js' },
-          { src: 'plugin/markdown/markdown.js' },
-          { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        ]
-      });
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            history: true,
+            dependencies: [{
+                    src: 'plugin/markdown/marked.js'
+                },
+                {
+                    src: 'plugin/markdown/markdown.js'
+                },
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                },
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }
+            ]
+        });
+
     </script>
-  </body>
+</body>
+
 </html>
