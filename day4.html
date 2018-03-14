@@ -59,6 +59,9 @@
             function callDog(dogName){
               console.log("Come here, " + dogName  + "!");
             }
+
+            callDog("Charlie");
+            // "Come here, Charlie."
           </code></pre>
                 <aside class="notes">
                     <p>Demo this function in the console. Demo writing a function that accepts more than a single argument.</p>
@@ -78,7 +81,8 @@
                     function miles2Kilometers(miles) {
                         return miles * 1.60934;
                     }
-                    console.log(miles2Kilometers(3));
+                    var kilometers = miles2Kilometers(3)
+                    console.log(kilometers);
                     // 4.82802
                 </code></pre>
             </section>
@@ -130,7 +134,7 @@
                 <p>You can also retrieve values from an array:</p>
                 <pre><code data-trim>
               var firstColor = colors[0];
-              var lastColor = colors[3];
+              var lastColor = colors[2];
             </code></pre>
                 <aside class="notes">
                     <p>Demo arrays in the console and/or on the whiteboard. Show how items can be added or changed. Explain
