@@ -180,6 +180,42 @@
                     1<sup>2</sup> = 1 through 12<sup>2</sup> = 144) </p>
             </section>
             <section>
+                <h3>Loops and arrays</h3>
+                <p>When we put loops and arrays together, we can perform operations on the entire array.</p>
+                <pre><code data-trim="true">
+                    // Print each student
+                    var students = ["Dale", "Cadence", "Alex", "Nevada"];
+                    for (var index = 0; index &lt; students.length; index++) {
+                        console.log(students[index]);
+                    }
+                </code></pre>
+                <aside class="notes">
+                    Walk through this example step by step. Make sure to talk about why we use &lt; instead of
+                    &lt;=.
+                </aside>
+            </section>
+            <section>
+                <h3>CODE BREAK</h3>
+                <p>Write a for loop that will take an array of numbers, like so:</p>
+                <p><code>var numbers = [7, 2, -1, 18];</code></p>
+                <p>The loop should print the square of each number.</p>
+                <p>Try turning this into a function.</p>
+            </section>
+            <section>
+                <h3>Putting functions and loops together</h3>
+                <p>We can use functions and loops together to create new arrays or extract a piece of information from an array.</p>
+                <pre><code data-trim="true">
+                    // Return the average of an array.
+                    function average(numbers) {
+                        var sum = 0;
+                        for (var i = 0; i &lt; numbers.length; i++) {
+                            sum += numbers[i];
+                        }
+                        return sum / numbers.length;
+                    }
+                </code></pre>
+            </section>
+            <section>
                 <h3>Objects</h3>
                 <p>An object in JavaScript is a more complex data structure that can store pairs of keys and values. It is a
                     little like a dictionary.</p>
@@ -215,7 +251,9 @@
                 <pre><code data-trim>
               var mySign=aboutMe['zodiacSign'];
             </code></pre>
-                <aside class="notes">Demo accessing object data in the console.</aside>
+                <aside class="notes">
+                    Demo accessing object data in the console. Ask why you might use bracket notation over dot notation.
+                </aside>
             </section>
             <section>
                 <h3>CODE BREAK</h3>
@@ -226,6 +264,37 @@
                     <li>alreadyRead (a boolean indicating if you read it yet)</li>
                 </ul>
                 <p>Add other properties if you like.</p>
+            </section>
+            <section>
+                <h3>Putting all of this together</h3>
+                <p>Functions, arrays, loops, and objects are the fundamental parts of programming. There are more things
+                    to learn, but with these tools, you can write almost any program you want. When you combine them, you
+                    can do very powerful things.
+                </p>
+            </section>
+            <section>
+                <h3>Arrays, objects, loops, and functions</h3>
+                <pre><code data-trim="true">
+                    var students = [{name: "Trinidad", age: 27},
+                                    {name: "Scout", age: 53},
+                                    {name: "Kai", age: 31}];
+
+                    function getAges(people) {
+                        var ages = [];
+                        for (var i = 0; i &lt; people.length; i++) {
+                            ages.push(people[i].age);
+                        }
+                        return ages;
+                    }
+
+                    getAges(students); // [27, 53, 31]
+                </code></pre>
+            </section>
+            <section>
+                <h3>CODE BREAK</h3>
+                <p>Take the code from the previous example. Make a function called getAverageAge that takes an array of students
+                    and returns the average age of the students.
+                </p>
             </section>
             <section>
                 <h3>HOMEWORK 1</h3>
