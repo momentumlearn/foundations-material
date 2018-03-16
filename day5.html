@@ -135,7 +135,7 @@
             document.querySelectorAll(".profile-photo");
           </code></pre>
           <aside class="notes">
-            <p>Demo these examples in the console, perhaps showing how you might handle the list of node returned by the `querySelectorAll` method.</p>
+            <p>Demo these examples in the console, perhaps showing how you might handle the list of nodes returned by the `querySelectorAll` method.</p>
             <p>Note that the argument to this method is the _entire_ selector, just like it is used in CSS (you could also use #, tag names, and more complex selectors, but the students won't have seen those at this point).</p>
           </aside>
         </section>
@@ -177,6 +177,11 @@
           <aside class="notes">
             <p>Demo and walk through this code.</p>
             <p>You could choose to illustrate the difference between element.className (which gets/sets) and element.classList (which returns a DOMTokenList and has methods you can call to add/remove/toggle classes).</p>
+            <p>MDN documentation:</p>
+            <ul>
+              <l1><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">Element.classList</a></l1>
+              <l1><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className">Element.className</a></l1>
+            </ul>
           </aside>
         </section>
         <section>
@@ -190,6 +195,9 @@
             <p>Change the <span class="code-snippet">src</span> attribute so that a different image will be displayed.</p>
             <p>Add or change the style attribute, using whatever properties you'd like.</p>
             <p>Experiment with selecting and changing other DOM nodes in your page!</p>
+            <aside class="notes">
+              <p>If there will be time to do this: let people know that at the end of the code break, you'll ask everyone to show something they played with, discovered, or had trouble with.</p>
+            </aside>
         </section>
         <section>
           <h2>Changing content in the DOM</h2>
@@ -199,7 +207,8 @@
             element.innerHTML = '&lt;h2&gt;Boomerang&lt;h2&gt;';
           </code></pre>
           <aside class="notes">
-            <p>Some confusing concepts for newbies here are using both methods and properties, and some of those can do both getting/setting. Demo these things in the console, take it slowly, and don't worry too much about that distinction during this class. It's more important that they get some practice using them and seeing the results.</p>
+            <p>Some confusing concepts for newbies here: using both methods and properties, and the fact that some of those can do both getting/setting.</p>
+            <p> Demo these things in the console, take it slowly, and don't worry too much about that distinction during this class. It's more important that they get some practice using them and seeing the results.</p>
           </aside>
         </section>
         <section>
@@ -212,6 +221,14 @@
             existingElement.appendChild(newElement);
               // Add that element to the DOM
           </code></pre>
+          <aside class="notes">
+            <p>MDN documentation:</p>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">Document.getElementById</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">Document.createElement</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild">Node.appendChild</a></li>
+            </ul>
+          </aside>
         </section>
         <section>
           <h2>Removing things from the DOM</h2>
@@ -239,6 +256,11 @@
           <aside class="notes">
             <p>Ask students to brainstorm what some events might be and some interactions they are familiar with on webpages.</p>
             <p>Explain that the event interface is like other JS objects, with properties and methods that we can interact with.</p>
+            <p>MDN Documentation:</p>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Events">Event Reference</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Web Events</a></li>
+            </ul>
           </aside>
         </section>
         <section>
@@ -298,12 +320,19 @@
           </ul>
         </section>
         <section>
-          <h2>HOMEWORK</h2>
+          <h2>HOMEWORK 1</h2>
           <ol>
             <li>Go back to the in-class coding exercises you did to make changes to the DOM. Add event handlers so that those changes are made in response to an event.</li>
             <li>Add a JavaScript event to the page you built for homework on day one or two.</li>
             <li>Use the <a href="https://developer.mozilla.org/en-US/docs/Web/Events">MDN event reference</a> to see other browser events you could try.</li>
           </ol>
+        </section>
+        <section>
+          <h2>HOMEWORK 2</h2>
+          <p>Go back to the <a href="https://glitch.com/edit/#!/momentum-f2c?path=script.js:7:0">Glitch program</a> from yesterday and read that code again now that you have some knowledge about the DOM.</p>
+          <p>Building on what you know from this code, try adding a button (or just a div styled to look like a button...) to your page that lets your user click it to change the background color of the page when it's clicked.  </p>
+          <p>What about changing other styles?</p>
+          <p><span class="brand-salmon bold">EXTRA CHALLENGE:</span> Create a drop down menu with theme options that changes different styles on the page to create a different look.</p>
         </section>
       </div>
       <footer class="footer">
@@ -323,7 +352,8 @@
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
           { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        ]
+        ],
+        history: true
       });
     </script>
   </body>
