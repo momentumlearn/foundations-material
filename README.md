@@ -1,4 +1,7 @@
-# Code Foundations course material
+# ARCHIVED Code Foundations course material
+
+**Note:** This repository represents a legacy version and is read-only.
+
 
 ## TLDR
 
